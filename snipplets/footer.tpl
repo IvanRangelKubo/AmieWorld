@@ -1,110 +1,128 @@
-<div class="customfooter">
+  <div class="customfooter">
+    <div class="customcontainer">
 
-	<a href="{{ store.url }}" class="logofooter w-inline-block">
-		<img src="{{ "logo_footer.jpg" | static_url }}" loading="lazy" alt="" class="escudofooter">
-	</a>
+      <div id="w-node-_0737ae8c-1141-924f-e9ac-aff72f07025a-2f070258" class="w-layout-layout footerstack wf-layout-layout">
 
-	<div class="custom-container">
-		<div id="w-node-abf9476f-c460-dfd6-4453-3f0845eb2446-45eb2442" class="w-layout-layout footerstack wf-layout-layout">
+        <div id="w-node-_0737ae8c-1141-924f-e9ac-aff72f07025b-2f070258" class="w-layout-cell celinfofooter">
 
-			<div id="w-node-abf9476f-c460-dfd6-4453-3f0845eb2447-45eb2442" class="w-layout-cell">
-				<div class="infocolfooter">
-					<h5 class="footertitle">{{ settings.menu_1_name }}</h5>
-					<ul role="list" class="listitemsfooter">
-						{% for item in menus[settings.footer_menu_1] %}
-							<li class="footeritemlist">
-								<a href="{{ item.url }}" {% if item.url | is_external %} target="_blank" {% endif %} class="footerlinktxt">{{ item.name }}</a>
-							</li>
-						{% endfor %}
-					</ul>
-				</div>
-			</div>
-
-			<div id="w-node-abf9476f-c460-dfd6-4453-3f0845eb2458-45eb2442" class="w-layout-cell">
-				<div class="infocolfooter">
-					<h5 class="footertitle">{{ settings.menu_2_name }}</h5>
-					<ul role="list" class="listitemsfooter">
-						{% for item in menus[settings.footer_menu_2] %}
-							<li class="footeritemlist">
-								<a href="{{ item.url }}" {% if item.url | is_external %} target="_blank" {% endif %} class="footerlinktxt">{{ item.name }}</a>
-							</li>
-						{% endfor %}
-					</ul>
-				</div>
-			</div>
-
-			<div id="w-node-abf9476f-c460-dfd6-4453-3f0845eb2469-45eb2442" class="w-layout-cell">
-				<div class="infocolfooter">
-					<h5 class="footertitle">SÍGUENOS</h5>
-					<ul role="list" class="listitemsfooter">
-						<li class="footeritemlist">
-							{% if settings.instagram_url %}
-								<a href="{{ settings.instagram_url }}" target="_blank" class="linksocial w-inline-block">
-									<img src="{{ "images/icon_instagram.svg" | static_url }}" loading="lazy" alt="" class="socialicon">
-								</a>
-							{% endif %}
-							{% if settings.x_url %}
-								<a href="{{ settings.x_url }}" target="_blank" class="linksocial w-inline-block">
-									<img src="{{ "images/icon_twitter.svg" | static_url }}" loading="lazy" alt="" class="socialicon">
-								</a>
-							{% endif %}
-							{% if settings.facebook_url %}
-								<a href="{{ settings.facebook_url }}" class="linksocial w-inline-block">
-									<img src="{{ "images/icon_meta.svg" | static_url }}" loading="lazy" alt="" class="socialicon">
-								</a>
-							{% endif %}
-							{% if settings.youtube_url %}
-								<a href="{{ settings.youtube_url }}" target="_blank" class="linksocial w-inline-block">
-									<img src="{{ "images/icon_youtube.svg" | static_url }}" loading="lazy" alt="" class="socialicon">
-								</a>
-							{% endif %}
-							{% if settings.tiktok_url %}
-								<a href="{{ settings.tiktok_url }}" target="_blank" class="linksocial w-inline-block">
-									<img src="{{ "images/icon_tiktok.svg" | static_url }}" loading="lazy" alt="" class="socialicon">
-								</a>
-							{% endif %}
-						</li>
-					</ul>
-				</div>
-				<div class="infocolfooter">
-					{% if settings.footer_email %}
-						<h5 class="footertitle">CONTACTO</h5>
-						<ul role="list" class="listitemsfooter">
-							<li class="footeritemlist">
-								<a href="mailto:{{ settings.footer_email }}" class="footerlinktxt">{{ settings.footer_email }}</a>
-							</li>
-						</ul>
-					{% endif %}
-				</div>
-			</div>
-
-			{% include "snipplets/newsletter.tpl" %}
-
-		</div>
-		<div class="paymentinfocont">
-			<h5 class="footertitle center">PAGOS SEGUROS</h5><img src="{{ "pagos.jpg" | static_url }}" loading="lazy" alt="" class="paymentlogos">
-		</div>
-		<div class="copyright" id="copy">Copyright © Toluca Fútbol Club - Tienda Oficial · Designed and Developed by
-			<a href="https://www.kubodigital.mx" target="_blank" class="kdlink">Kubo Digital</a>
-		</div>
-
-    <div style=" display: flex; flex-direction: row; justify-content: center; ">{{ new_powered_by_link }}</div>
+          <a href="{{ store.url }}" class="linklogofooter w-inline-block">
+						<img src="{{ "logo_footer.jpg" | static_url }}"  alt="Amie World" class="logofooter">
+					</a>
 
 
+          <div class="colfooter">
+            <h5 data-w-id="0737ae8c-1141-924f-e9ac-aff72f070260" class="footertiltulo">{{ settings.menu_1_name }}</h5>
+            <div class="cont-items-footer">
+              <ul role="list" class="items-footer">
+								{% for item in menus[settings.footer_menu_1] %}
+									<li class="item-list-footer">
+										<a href="{{ item.url }}" {% if item.url | is_external %} target="_blank" {% endif %} class="footerlink">{{ item.name }}</a>
+									</li>
+								{% endfor %}
+              </ul>
+            </div>
+          </div>
 
-	</div>
-</div>
+          <div class="colfooter">
+            <h5 data-w-id="0737ae8c-1141-924f-e9ac-aff72f070275" class="footertiltulo">{{ settings.menu_2_name }}</h5>
+            <div class="cont-items-footer">
+              <ul role="list" class="items-footer">
+								{% for item in menus[settings.footer_menu_2] %}
+									<li class="item-list-footer">
+										<a href="{{ item.url }}" {% if item.url | is_external %} target="_blank" {% endif %} class="footerlink">{{ item.name }}</a>
+									</li>
+								{% endfor %}
+              </ul>
+            </div>
+          </div>
+
+          <div class="colfooter">
+            <h5 data-w-id="0737ae8c-1141-924f-e9ac-aff72f070287" class="footertiltulo">{{ settings.menu_3_name }}</h5>
+            <div class="cont-items-footer">
+              <ul role="list" class="items-footer">
+								{% for item in menus[settings.footer_menu_3] %}
+									<li class="item-list-footer">
+										<a href="{{ item.url }}" {% if item.url | is_external %} target="_blank" {% endif %} class="footerlink">{{ item.name }}</a>
+									</li>
+								{% endfor %}
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="w-node-_0737ae8c-1141-924f-e9ac-aff72f07025e-2f070258" class="w-layout-cell cellnewsfooter">
+
+          <div class="colfooter social">
+
+            <h5 class="footertiltulo noarrow">SÍGUENOS</h5>
+            <div class="cont-items-footer visible">
+              <ul role="list" class="items-footer">
+                <li class="item-list-footer contact">
+
+									{% if settings.tiktok_url %}
+										<a href="{{ settings.tiktok_url }}" target="_blank" class="footerlink w-inline-block">
+											<img src="{{ "images/icon_tiktok.svg" | static_url }}" alt="TikTok" class="footericon">
+										</a>
+									{% endif %}
+
+									{% if settings.instagram_url %}
+										<a href="{{ settings.instagram_url }}" target="_blank" class="footerlink w-inline-block">
+											<img src="{{ "images/icon_instagram.svg" | static_url }}" alt="Instagram" class="footericon">
+										</a>
+									{% endif %}
+
+									{% if settings.facebook_url %}
+										<a href="{{ settings.facebook_url }}" class="footerlink w-inline-block">
+											<img src="{{ "images/icon_meta.svg" | static_url }}" alt="Facebook" class="footericon">
+										</a>
+									{% endif %}
+
+                </li>
+              </ul>
+            </div>
+
+						{% include "snipplets/newsletter.tpl" %}
+
+          </div>
+					
+        </div>
+				
+      </div>
+      
+      <div class="copyright">
+        <div id="w-node-_0737ae8c-1141-924f-e9ac-aff72f0702bd-2f070258" class="w-layout-layout stackcopyr wf-layout-layout">
+          <div id="w-node-_0737ae8c-1141-924f-e9ac-aff72f0702be-2f070258" class="w-layout-cell">
+            <div class="copytxt" id="copy">© Amie World -  Developed &amp; Designed by <a href="https://www.kubodigital.mx" class="linkd">Kubo Digital</a></div>
+						<div style=" display: flex; flex-direction: row; justify-content: center; ">{{ new_powered_by_link }}</div>
+          </div>
+					
+          <div class="w-layout-cell">
+            <div class="contlogospagos">
+							<img  src="{{ "images/visa-10.svg" | static_url }}" alt="VISA" class="mediopago">
+							<img  src="{{ "images/mastercard_logo.svg" | static_url }}" alt="MasterCard" class="mediopago">
+							<img  src="{{ "images/mercado_pago_logo4.svg" | static_url }}" alt="Mercado Pago" class="mediopago">
+							<img  src="{{ "images/paypal_logo.svg" | static_url }}" alt="PayPal" class="mediopago">
+							<img  src="{{ "images/bbva-2.svg" | static_url }}" alt="BBVA" class="mediopago">
+							<img  src="{{ "images/oxxo-logo.svg" | static_url }}" alt="OXXO" class="mediopago">
+						</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 
 <script>
 	window.addEventListener('load', () => {
-const copy = document.getElementById('copy');
-const copyIndex = copy.innerHTML.indexOf('©');
-const date = new Date();
-const year = date.getFullYear();
+		const copy = document.getElementById('copy');
+		const copyIndex = copy.innerHTML.indexOf('©');
+		const date = new Date();
+		const year = date.getFullYear();
 
-if (copyIndex !== -1) {
-const content = ` ${year}`
-copy.innerHTML = copy.innerHTML.replace('©', '©' + content);
-}
-})
+		if (copyIndex !== -1) {
+		const content = ` ${year}`
+		copy.innerHTML = copy.innerHTML.replace('©', '©' + content);
+		}
+	})
 </script>

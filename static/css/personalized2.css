@@ -3201,7 +3201,6 @@ textarea.w-select {
 
 .footerlink {
   color: var(--darkgrey);
-  white-space: break-spaces;
   margin-bottom: 5px;
   font-family: Montserrat, sans-serif;
   font-size: 13px;

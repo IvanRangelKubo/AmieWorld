@@ -581,6 +581,14 @@ Pie de página
 	menu
 		name = footer_menu_2
 		description = Selecciona un menu para la segunda columna
+	subtitle
+		subtitle = Menu 3
+	i18n_input
+		name = menu_3_name
+		description = Titulo del menu
+	menu
+		name = footer_menu_3
+		description = Selecciona un menu para la primera columna
 	title
 		title = Redes sociales 
 	i18n_input
