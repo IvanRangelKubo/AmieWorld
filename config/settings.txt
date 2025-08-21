@@ -108,8 +108,6 @@ Página de inicio
 		gallery_more_info = true
 	subtitle
 		subtitle = Imágenes para celulares
-	description
-		description = Mejorá la calidad y velocidad de carga con esta opción
 	gallery
 		name = slider_mobile
 		gallery_image = Agregar imagen
@@ -117,8 +115,6 @@ Página de inicio
 		gallery_width = 820
 		gallery_height = 1460
 		gallery_more_info = true
-	subtitle
-		subtitle = <a target='_blank' data-toggle-info='show-on_slider_mobile-inactive' href='https://ayuda.tiendanube.com/es/articles/3297783-como-usar-el-carrusel-de-imagenes-para-las-plantillas-idea-bahia-y-amazonas'>¿Cómo diseñar las imágenes para tu carrusel?</a>
 	collapse
 		title = Información de envíos, pagos y compra
 		backto = home_order_position
