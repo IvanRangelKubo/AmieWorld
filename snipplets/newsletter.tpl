@@ -19,7 +19,7 @@
 
             <label class="w-checkbox accept-tyc">
                 <div class="w-checkbox-input w-checkbox-input--inputType-custom termscheckbopx"></div>
-                <input type="checkbox" name="Checkbox" id="Checkbox" data-name="Checkbox" required="" style="opacity:0;position:absolute;z-index:-1">
+                <input type="checkbox" name="Checkbox" id="Checkbox" data-name="Checkbox" required="" style="opacity:0;position:absolute;z-index:-1" oninvalid="this.setCustomValidity('Marque esta casilla si desea continuar')" oninput="this.setCustomValidity('')" >
                 <span class="labelcheck-tyc w-form-label" for="Checkbox">Al suscribirte aceptas el <a href="/pages/aviso-de-privacidad" target="_blank" class="tycregister-labellink"> Aviso de privacidad.</a></span>
             </label>
 
