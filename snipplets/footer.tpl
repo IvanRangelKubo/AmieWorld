@@ -99,12 +99,12 @@
 					
           <div class="w-layout-cell">
             <div class="contlogospagos">
-							<img  src="{{ "images/visa-10.svg" | static_url }}" alt="VISA" class="mediopago">
-							<img  src="{{ "images/mastercard_logo.svg" | static_url }}" alt="MasterCard" class="mediopago">
-							<img  src="{{ "images/mercado_pago_logo4.svg" | static_url }}" alt="Mercado Pago" class="mediopago">
-							<img  src="{{ "images/paypal_logo.svg" | static_url }}" alt="PayPal" class="mediopago">
-							<img  src="{{ "images/bbva-2.svg" | static_url }}" alt="BBVA" class="mediopago">
-							<img  src="{{ "images/oxxo-logo.svg" | static_url }}" alt="OXXO" class="mediopago">
+							<img  src="{{ "pago1.jpg" | static_url }}" alt="{{ settings.pago1_alt}}" class="mediopago">
+							<img  src="{{ "pago2.jpg" | static_url }}" alt="{{ settings.pago2_alt}}" class="mediopago">
+							<img  src="{{ "pago3.jpg" | static_url }}" alt="{{ settings.pago3_alt}}" class="mediopago">
+							<img  src="{{ "pago4.jpg" | static_url }}" alt="{{ settings.pago4_alt}}" class="mediopago">
+							<img  src="{{ "pago5.jpg" | static_url }}" alt="{{ settings.pago5_alt}}" class="mediopago">
+							<img  src="{{ "pago6.jpg" | static_url }}" alt="{{ settings.pago6_alt}}" class="mediopago">
 						</div>
           </div>
         </div>

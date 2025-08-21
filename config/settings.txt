@@ -78,37 +78,6 @@ Encabezado
 		icon = arrow-up
 		advanced = true
 	collapse
-		title = Anuncios
-	description
-		description = Los Anuncios iran rotando cada 5 segundos
-	checkbox
-		name = ad_bar
-		description = Mostrar barra de anuncios
-	subtitle
-		subtitle = Anuncio 1
-	i18n_input
-		name = anuncio_1
-		description = Descripcion
-	i18n_input
-		name = ad_url_1
-		description = Url del anuncio
-	subtitle
-		subtitle = Anuncio 2
-	i18n_input
-		name = anuncio_2
-		description = Descripcion
-	i18n_input
-		name = ad_url_2
-		description = Url del anuncio
-	subtitle
-		subtitle = Anuncio 3
-	i18n_input
-		name = anuncio_3
-		description = Descripcion
-	i18n_input
-		name = ad_url_3
-		description = Url del anuncio
-	collapse
 		title = Encabezado
 	subtitle
 		subtitle = Logo
@@ -592,25 +561,14 @@ Pie de página
 	title
 		title = Redes sociales 
 	i18n_input
+		name = tiktok_url
+		description = Url TikTok
+	i18n_input
 		name = instagram_url
 		description = Url Instagram
 	i18n_input
-		name = x_url
-		description = Url de X
-	i18n_input
 		name = facebook_url
 		description = Url Facebook
-	i18n_input
-		name = youtube_url
-		description = Url Youtube
-	i18n_input
-		name = tiktok_url
-		description = Url TikTok
-	title
-		title = Contacto
-	i18n_input
-		name = footer_email
-		description = Email de Contacto
 	title
 		title = Suscripción al newsletter desde el footer
 	i18n_input
@@ -622,8 +580,41 @@ Pie de página
 	title
 		title = Medios de pago
 	image
-		original = pagos.jpg
+		original = pago1.jpg
 		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		name = pago1_alt
+		description = Texto alternativo (alt)
+	image
+		original = pago2.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		name = pago2_alt
+		description = Texto alternativo (alt)
+	image
+		original = pago3.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		name = pago3_alt
+		description = Texto alternativo (alt)
+	image
+		original = pago4.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		name = pago4_alt
+		description = Texto alternativo (alt)
+	image
+		original = pago5.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		name = pago5_alt
+		description = Texto alternativo (alt)
+	image
+		original = pago6.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		name = pago6_alt
+		description = Texto alternativo (alt)
 
 Edición avanzada de CSS
 	meta
