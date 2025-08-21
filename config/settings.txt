@@ -119,29 +119,19 @@ Página de inicio
 		title = Información de envíos, pagos y compra
 		backto = home_order_position
 	subtitle
-		subtitle = Titulo de Seccion
-	textarea
-		name = banner_services_title
-	subtitle
 		subtitle = BANNER 1
 	image
 		original = icon1.jpg
 		title = Cargar imagen (JPG)
-	i18n_input
-		name = banner_services_01_title
-		description = Título
-	i18n_input
+	textarea
 		name = banner_services_01_description
-		description = Descripción
+		description = "Descripción"
 	subtitle
 		subtitle = BANNER 2
 	image
 		original = icon2.jpg
 		title = Cargar imagen (JPG)
-	i18n_input
-		name = banner_services_02_title
-		description = Título
-	i18n_input
+	textarea
 		name = banner_services_02_description
 		description = Descripción
 	subtitle
@@ -149,10 +139,7 @@ Página de inicio
 	image
 		original = icon3.jpg
 		title = Cargar imagen (JPG)
-	i18n_input
-		name = banner_services_03_title
-		description = Título
-	i18n_input
+	textarea
 		name = banner_services_03_description
 		description = Descripción
 	collapse
