@@ -377,13 +377,8 @@ Página de inicio
 	collapse
 		title = Publicaciones de Instagram
 		backto = home_order_position
-	description
-		description = El Feed de Instagram muestra automáticamente tus últimas publicaciones en la página de inicio de tu tienda. Tu perfil debe ser público.
-	checkbox
-		name = show_instafeed
-		description = Mostrar tus publicaciones de Instagram en la página de inicio de tu tienda
 	subtitle
-		subtitle = Para mostrar tus publicaciones necesitás generar un token, <a target='_blank' href='https://ayuda.tiendanube.com/es_ES/como-mostrar-mis-publicaciones-de-instagram-en-mi-tienda'>¿cómo configurarlo?</a>
+		subtitle = No hay configuracion para esta seccion.
 	collapse
 		title = Reseñas
 		backto = home_order_position
