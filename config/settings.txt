@@ -146,6 +146,10 @@ Página de inicio
 		title = Carrucel de marcas
 		backto = home_order_position
 	subtitle
+		subtitle = Titulo de seccion
+	textarea
+		name =	brands_section_title
+	subtitle
 		subtitle = Marca 1
 	i18n_input
 		name = link_1

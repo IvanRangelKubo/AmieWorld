@@ -2,7 +2,7 @@
     <div class="customcontainer">
 
       <div class="secctitles">
-        <h1 class="maintitle center">Marcas favoritas 💖</h1>
+        <h1 class="maintitle center">{{ settings.brands_section_title }}</h1>
       </div>
 
       <div data-delay="4000" data-animation="slide" class="slidermarcas w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
