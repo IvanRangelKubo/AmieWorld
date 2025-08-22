@@ -1,39 +1,41 @@
-<div class="seccmasbuscados">
-    <div class="custom-container">
+  <div class="seccestrellas">
+    <div class="customcontainer">
 
-      <div class="maintitle-cont">
-        <h2 class="maintitle">LOS MÁS <span class="redtxttitle">BUSCADOS</span></h2>
+      <div class="secctitles">
+        <h1 class="maintitle">{{ settings.banners_section_title }}</h1>
+        <div class="linetitle"></div>
       </div>
 
-      <div id="w-node-_1ff1a483-2fd9-964c-e61a-a7541d17a537-ba5351bb" class="w-layout-layout stack-masbuscados wf-layout-layout">
-
-        {% if settings.banner_01_show %}
-          <div id="w-node-_1ff1a483-2fd9-964c-e61a-a7541d17a538-ba5351bb" class="w-layout-cell cardimg-coleccion">
-            <a href="{{settings.banner_01_url}}" class="cardlink w-inline-block">
-                <img src="{{ "banner_01.jpg" | static_url }}" loading="lazy" alt="" class="cardimg">
-              <h3 class="titlecard"><strong>{{settings.banner_01_title}}</strong></h3>
-            </a>
+      <div id="w-node-_0daa9377-cf83-b346-19aa-8f7009cd919b-40132ca6" class="w-layout-layout stackstarproduct wf-layout-layout">
+        <div class="w-layout-cell">
+          <div class="starproductcont">
+            <div class="btneimg">
+              <img src="{{ "banner_01.jpg" | static_url }}"  alt="" class="fotoestrella blue">
+              <a href="{{ settings.banner_01_url }}" class="comprarbtn blue w-button">Ver producto</a>
+            </div>
+            <p class="parrafoestrella">{{ settings.banner_01_descripcion }}</p>
           </div>
-        {% endif %}
+        </div>
 
-        {% if settings.banner_02_show %}
-          <div id="w-node-_1ff1a483-2fd9-964c-e61a-a7541d17a538-ba5351bb" class="w-layout-cell cardimg-coleccion">
-            <a href="{{settings.banner_02_url}}" class="cardlink w-inline-block">
-                <img src="{{ "banner_02.jpg" | static_url }}" loading="lazy" alt="" class="cardimg">
-              <h3 class="titlecard"><strong>{{settings.banner_02_title}}</strong></h3>
-            </a>
+        <div class="w-layout-cell">
+          <div class="starproductcont">
+            <div class="btneimg">
+              <img src="{{ "banner_02.jpg" | static_url }}"  alt="" class="fotoestrella">
+              <a href="{{ settings.banner_02_url }}" class="comprarbtn pink w-button">Ver producto</a>
+            </div>
+            <p class="parrafoestrella">{{ settings.banner_02_descripcion }}</p>
           </div>
-        {% endif %}
+        </div>
 
-        {% if settings.banner_03_show %}
-          <div id="w-node-_1ff1a483-2fd9-964c-e61a-a7541d17a538-ba5351bb" class="w-layout-cell cardimg-coleccion">
-            <a href="{{settings.banner_03_url}}" class="cardlink w-inline-block">
-                <img src="{{ "banner_03.jpg" | static_url }}" loading="lazy" alt="" class="cardimg">
-              <h3 class="titlecard"><strong>{{settings.banner_03_title}}</strong></h3>
-            </a>
+        <div class="w-layout-cell">
+          <div class="starproductcont">
+            <div class="btneimg">
+              <img src="{{ "banner_03.jpg" | static_url }}"  alt="" class="fotoestrella green">
+              <a href="{{ settings.banner_03_url }}" class="comprarbtn green w-button">Ver producto</a>
+            </div>
+            <p class="parrafoestrella">{{ settings.banner_03_descripcion }}</p>
           </div>
-        {% endif %}
-
+        </div>
       </div>
     </div>
-</div>
+  </div>

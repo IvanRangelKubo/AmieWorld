@@ -240,8 +240,12 @@ Página de inicio
 		width = 100
 		height = 100
 	collapse
-		title = Banners de Productos
+		title = Banners de categorias
 		backto = home_order_position
+	subtitle
+		subtitle = Titulo de seccion
+	textarea
+		name =	banners_section_title
 	subtitle
 		subtitle = CATEGORÍA 1
 	checkbox
@@ -252,9 +256,9 @@ Página de inicio
 		title = Cargar imagen (JPG, GIF, PNG)
 		width = 600
 		height = 600
-	i18n_input
-		name = banner_01_title
-		description = Título
+	textarea
+		name = banner_01_descripcion
+		description = Descripcion
 	i18n_input
 		name = banner_01_url
 		description = Link
@@ -268,9 +272,9 @@ Página de inicio
 		title = Cargar imagen (JPG, GIF, PNG)
 		width = 600
 		height = 600
-	i18n_input
-		name = banner_02_title
-		description = Título
+	textarea
+		name = banner_02_descripcion
+		description = Descripcion
 	i18n_input
 		name = banner_02_url
 		description = Link
@@ -284,9 +288,9 @@ Página de inicio
 		title = Cargar imagen (JPG, GIF, PNG)
 		width = 600
 		height = 600
-	i18n_input
-		name = banner_03_title
-		description = Título
+	textarea
+		name = banner_03_descripcion
+		description = Descripcion
 	i18n_input
 		name = banner_03_url
 		description = Link
@@ -425,7 +429,7 @@ Página de inicio
 			welcome = Carrucel de marcas
 			products = Productos destacados
 			informatives = Garantias
-			categories = Banners de productos
+			categories = Banners de categorias
 			modules = Ubicaciones de tiendas
 			video = Video
 			instafeed = Publicaciones de Instagram
