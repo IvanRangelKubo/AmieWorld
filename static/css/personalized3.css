@@ -2919,7 +2919,7 @@ textarea.w-select {
   position: absolute;
 }
 
-.imgfront:hover {
+.hoverOn:hover {
   opacity: 0;
 }
 

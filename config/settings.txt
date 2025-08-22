@@ -116,7 +116,7 @@ Página de inicio
 		gallery_height = 1460
 		gallery_more_info = true
 	collapse
-		title = Información de envíos, pagos y compra
+		title = Garantias
 		backto = home_order_position
 	subtitle
 		subtitle = BANNER 1
@@ -143,7 +143,7 @@ Página de inicio
 		name = banner_services_03_description
 		description = Descripción
 	collapse
-		title = Banner Secundario
+		title = Carrucel de marcas
 		backto = home_order_position
 	i18n_input
 		name = link_message
@@ -159,7 +159,7 @@ Página de inicio
 		width = 780
 		height = 450
 	collapse
-		title = Banners de categorías
+		title = Banners de Productos
 		backto = home_order_position
 	subtitle
 		subtitle = CATEGORÍA 1
@@ -341,10 +341,10 @@ Página de inicio
 		start_index = 0
 		sections
 			slider = Carrusel de imágenes
-			welcome = Banner Secundario
+			welcome = Carrucel de marcas
 			products = Productos destacados
-			informatives = Información de envíos, pagos y compra
-			categories = Banners de categorías
+			informatives = Garantias
+			categories = Banners de productos
 			modules = Ubicaciones de tiendas
 			video = Video
 			instafeed = Publicaciones de Instagram
