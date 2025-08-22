@@ -1,64 +1,59 @@
-  <div class="secctiendasoficiales">
-    <div class="custom-container">
-      <div id="w-node-_536fd8d5-3d21-cf38-2caf-69d4af28366e-ba5351bb" class="w-layout-layout stack-stores wf-layout-layout">
-
-        <div id="w-node-_536fd8d5-3d21-cf38-2caf-69d4af28366f-ba5351bb" class="w-layout-cell cellcolorstores">
-          <div class="storehours">
-            <h5 class="store-name white">{{ settings.stores_title }}</h5>
-            <p class="infotiendas">{{ settings.stores_description }}<br><br>Lunes a Viernes: <br>{{ settings.week_time }}<br><br>Sábados y Domingos<br>{{ settings.weekend_time }}</p>
+  <div class="seccbloghome">
+    <div class="customcontainer">
+      <div id="w-node-c8c2c54b-7f5a-f016-123d-5f2b9057b293-40132ca6" class="w-layout-layout stackbloghome wf-layout-layout">
+        <div class="w-layout-cell cellintroblog">
+          <div class="secctitles">
+            <h1 class="maintitle">Amie Blog 📝</h1>
+            <div class="linetitle"></div>
           </div>
+          <p class="introblog">Bienvenidx a Amie World, tu espacio de belleza y cuidado personal 🌸 Aquí descubrirás lo mejor del skincare coreano, tips, reseñas y secretos para cuidar tu piel con ingredientes innovadores y rutinas que se adaptan a ti.</p>
+          <a href="#" class="comprarbtn blog w-button">Ver Blog</a>
         </div>
-
-        <div id="w-node-_536fd8d5-3d21-cf38-2caf-69d4af283670-ba5351bb" class="w-layout-cell cellinfomaps">
-          <div data-delay="4000" data-animation="slide" class="stores-slider w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
-            <div class="w-slider-mask">
-
-              {% if settings.store_1_name %}
-                <div class="storeslide w-slide">
-                  <div class="containerstore-item">
-                    <h5 class="store-name">{{ settings.store_1_name }}</h5>
-                    <p class="storeadress">{{ settings.store_1_address }}</p>
-                    <a href="{{ settings.store_1_link }}" target="_blank" class="linkmap w-inline-block">
-                    <img src="{{ "store1.jpg" | static_url }}" loading="lazy" class="mapimg"></a>
-                    <a href="{{ settings.store_1_link }}" target="_blank" class="btntienda w-button">CÓMO LLEGAR</a>
+        <div class="w-layout-cell">
+          <div data-delay="5000" data-animation="slide" class="blogslider w-slider" data-autoplay="true" data-easing="ease-in-out" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="600" data-infinite="true">
+            <div class="maskblog w-slider-mask">
+              <div class="entryslide w-slide">
+                <div class="entrycont">
+                  <div id="w-node-_25b0f977-cabd-95db-18f5-b9697890f21e-40132ca6" class="w-layout-layout stackentry wf-layout-layout">
+                    <div class="w-layout-cell imgcellentry">
+                      <div class="imgentrydiv"></div>
+                    </div>
+                    <div class="w-layout-cell">
+                      <div class="infominblog">
+                        <div class="dateentryblog">30/07/2025</div>
+                        <h5 class="titleentry">El secreto para una piel radiante que amamos ✨ Aquí descubrirás lo mejor del skincare</h5>
+                        <p class="excerptblog">Bienvenidx a Amie World, tu espacio de belleza y cuidado personal 🌸 Aquí descubrirás lo mejor del skincare coreano, tips, reseñas y secretos para cuidar tu piel con ingredientes innovadores y rutinas que se adaptan a ti.</p>
+                        <a href="#" class="readmoreblog">Leer más</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              {% endif %}
-
-              {% if settings.store_2_name %}
-                <div class="storeslide w-slide">
-                  <div class="containerstore-item">
-                    <h5 class="store-name">{{ settings.store_2_name }}</h5>
-                    <p class="storeadress">{{ settings.store_2_address }}</p>
-                    <a href="{{ settings.store_2_link }}" target="_blank" class="linkmap w-inline-block">
-                    <img src="{{ "store2.jpg" | static_url }}" loading="lazy" class="mapimg"></a>
-                    <a href="{{ settings.store_2_link }}" target="_blank" class="btntienda w-button">CÓMO LLEGAR</a>
+              </div>
+              <div class="entryslide w-slide">
+                <div class="entrycont">
+                  <div id="w-node-_575229d4-84ac-cb8f-62a7-162ef38c1679-40132ca6" class="w-layout-layout stackentry wf-layout-layout">
+                    <div class="w-layout-cell imgcellentry">
+                      <div class="imgentrydiv"></div>
+                    </div>
+                    <div class="w-layout-cell">
+                      <div class="infominblog">
+                        <div class="dateentryblog">30/07/2025</div>
+                        <h5 class="titleentry">El secreto para una piel radiante que amamos ✨ Aquí descubrirás lo mejor del skincare</h5>
+                        <p class="excerptblog">Bienvenidx a Amie World, tu espacio de belleza y cuidado personal 🌸 Aquí descubrirás lo mejor del skincare coreano, tips, reseñas y secretos para cuidar tu piel con ingredientes innovadores y rutinas que se adaptan a ti.</p>
+                        <a href="#" class="readmoreblog">Leer más</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              {% endif %}
-
-              {% if settings.store_3_name %}
-                <div class="storeslide w-slide">
-                  <div class="containerstore-item">
-                    <h5 class="store-name">{{ settings.store_3_name }}</h5>
-                    <p class="storeadress">{{ settings.store_3_address }}</p>
-                    <a href="{{ settings.store_3_link }}" target="_blank" class="linkmap w-inline-block">
-                    <img src="{{ "store3.jpg" | static_url }}" loading="lazy" class="mapimg"></a>
-                    <a href="{{ settings.store_3_link }}" target="_blank" class="btntienda w-button">CÓMO LLEGAR</a>
-                  </div>
-                </div>
-              {% endif %}
-
+              </div>
             </div>
-
-            <div class="storesarrow w-slider-arrow-left">
-              <div class="w-icon-slider-left"></div>
+            <div class="arrowslider hiddenmobile w-slider-arrow-left">
+              <div class="iconslidermain w-icon-slider-left"></div>
             </div>
-            <div class="storesarrow w-slider-arrow-right">
-              <div class="w-icon-slider-right"></div>
+            <div class="arrowslider hiddenmobile w-slider-arrow-right">
+              <div class="iconslidermain w-icon-slider-right"></div>
             </div>
-            <div class="navigationdots stores w-slider-nav w-round"></div>
-
+            <div class="navblog w-slider-nav w-slider-nav-invert w-round"></div>
           </div>
         </div>
       </div>
