@@ -1,5 +1,5 @@
 {% if store.whatsapp %}
-    <a href="{{ store.whatsapp }}" target="_blank" class="js-btn-fixed-bottom btn-whatsapp" aria-label="{{ 'Comunicate por WhatsApp' | translate }}">
-        {% include "snipplets/svg/whatsapp.tpl" with {svg_custom_class: "icon-inline icon-2x"} %}
+    <a href="{{ store.whatsapp }}" target="_blank" class="whatsapplink w-inline-block">
+        <img  src="{{ "images/whatsapp_icon.svg" | static_url }}" alt="WhatsApp" class="iconwhats">
     </a>
 {% endif %}
