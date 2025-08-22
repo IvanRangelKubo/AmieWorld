@@ -240,14 +240,14 @@ Página de inicio
 		width = 100
 		height = 100
 	collapse
-		title = Banners de categorias
+		title = Banners de productos
 		backto = home_order_position
 	subtitle
 		subtitle = Titulo de seccion
 	textarea
 		name =	banners_section_title
 	subtitle
-		subtitle = CATEGORÍA 1
+		subtitle = Producto 1
 	checkbox
 		name = banner_01_show
 		description = Mostrar banner
@@ -263,7 +263,7 @@ Página de inicio
 		name = banner_01_url
 		description = Link
 	subtitle
-		subtitle = CATEGORÍA 2
+		subtitle = Producto 2
 	checkbox
 		name = banner_02_show
 		description = Mostrar banner
@@ -279,7 +279,7 @@ Página de inicio
 		name = banner_02_url
 		description = Link
 	subtitle
-		subtitle = CATEGORÍA 3
+		subtitle = Procducto 3
 	checkbox
 		name = banner_03_show
 		description = Mostrar banner
@@ -385,16 +385,34 @@ Página de inicio
 	subtitle
 		subtitle = Para mostrar tus publicaciones necesitás generar un token, <a target='_blank' href='https://ayuda.tiendanube.com/es_ES/como-mostrar-mis-publicaciones-de-instagram-en-mi-tienda'>¿cómo configurarlo?</a>
 	collapse
-		title = Video
+		title = Reseñas
 		backto = home_order_position
-	checkbox
-		name = video_full
-		description = Mostrar video a todo el ancho de la pantalla en computadoras
+	subtitle
+		subtitle = Titulo de seccion
+	textarea
+		name =	reviews_section_title
+	subtitle
+		subtitle = Reseña 1
 	i18n_input
-		name = video_embed
-		description = Link (Youtube o Vimeo)
-	description
-		description = Ej: https://www.youtube.com/watch?v=dptrWehSI8c
+		name = review_name_1
+		description = Nombre del usuario
+	i18n_input
+		name = review_city_1
+		description = Ciudad
+	textarea
+		name = review_1
+		description = Reseña
+	subtitle
+		subtitle = Reseña 2
+	i18n_input
+		name = review_name_2
+		description = Nombre del usuario
+	i18n_input
+		name = review_city_2
+		description = Ciudad
+	textarea
+		name = review_2
+		description = Reseña
 	collapse
 		title = Pop-up promocional
 		backto = home_order_position
@@ -429,9 +447,9 @@ Página de inicio
 			welcome = Carrucel de marcas
 			products = Productos destacados
 			informatives = Garantias
-			categories = Banners de categorias
+			categories = Banners de productos
 			modules = Ubicaciones de tiendas
-			video = Video
+			video = Reseñas
 			instafeed = Publicaciones de Instagram
 	link
 		text = Pop-up promocional
