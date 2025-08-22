@@ -1,37 +1,95 @@
-  <div class="seccboletos">
-    <div class="custom-container">
+  <div class="seccmarcas">
+    <div class="customcontainer">
 
-      <div data-delay="4000" data-animation="cross" class="mainslider w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
-        <div class="w-slider-mask">
-          <div class="element-slide w-slide">
-            <a href="{{settings.link_message}}" class="linkmainbanner w-inline-block">
-            <img alt="" src="{{ "banner_boletos_opt.jpg" | static_url }}" class="bannerimg"></a>
-          </div>
-        </div>
-        <div class="arrowmainslider secundario w-slider-arrow-left">
-          <div class="w-icon-slider-left"></div>
-        </div>
-        <div class="arrowmainslider secundario w-slider-arrow-right">
-          <div class="w-icon-slider-right"></div>
-        </div>
-        <div class="navigationdots secundario w-slider-nav w-round"></div>
+      <div class="secctitles">
+        <h1 class="maintitle center">Marcas favoritas 💖</h1>
       </div>
 
-      <div data-delay="4000" data-animation="cross" class="mainslider mobile w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="true" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
-        <div class="w-slider-mask">
-          <div class="element-slide w-slide">
-            <a href="{{settings.link_message}}" class="linkmainbanner w-inline-block">
-            <img src="{{ "banner_boletos_mobile_opt.jpg" | static_url }}"  alt="" class="bannerimg"></a>
-          </div>
-        </div>
-        <div class="arrowmainslider w-slider-arrow-left">
-          <div class="w-icon-slider-left"></div>
-        </div>
-        <div class="arrowmainslider w-slider-arrow-right">
-          <div class="w-icon-slider-right"></div>
-        </div>
-        <div class="mainslider-nav w-slider-nav w-round"></div>
-      </div>
+      <div data-delay="4000" data-animation="slide" class="slidermarcas w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+        <div class="brandsmask w-slider-mask">
 
+          {% if settings.link_1  %}
+            <div class="slidebrand w-slide">
+              <a href="{{ settings.link_1 }}" class="logobrandlink w-inline-block">
+                <img src="{{ "icono1.jpg" | static_url }}"  alt="" class="marcaimg">
+              </a>
+            </div>
+          {% endif %}
+
+          {% if ettings.link_2 %}
+            <div class="slidebrand w-slide">
+              <a href="{{ settings.link_2 }}" class="logobrandlink w-inline-block">
+                <img src="{{ "icono2.jpg" | static_url }}"  alt="" class="marcaimg">
+              </a>
+            </div>
+          {% endif %}
+
+          {% if settings.link_3 %}
+            <div class="slidebrand w-slide">
+              <a href="{{ settings.link_3 }}" class="logobrandlink w-inline-block">
+                <img src="{{ "icono3.jpg" | static_url }}"  alt="" class="marcaimg">
+              </a>
+            </div>
+          {% endif %}
+
+          {% if settings.link_4 %}
+            <div class="slidebrand w-slide">
+              <a href="{{ settings.link_4 }}" class="logobrandlink w-inline-block">
+                <img src="{{ "icono4.jpg" | static_url }}"  alt="" class="marcaimg">
+              </a>
+            </div>
+          {% endif %}
+
+          {% if settings.link_5 %}
+            <div class="slidebrand w-slide">
+              <a href="{{ settings.link_5 }}" class="logobrandlink w-inline-block">
+                <img src="{{ "icono5.jpg" | static_url }}"  alt="" class="marcaimg">
+              </a>
+            </div>
+          {% endif %}
+
+          {% if settings.link_6 %}
+            <div class="slidebrand w-slide">
+              <a href="{{ settings.link_6 }}" class="logobrandlink w-inline-block">
+                <img src="{{ "icono6.jpg" | static_url }}"  alt="" class="marcaimg">
+              </a>
+            </div>
+          {% endif %}
+
+          {% if settings.link_7 %}
+            <div class="slidebrand w-slide">
+              <a href="{{ settings.link_7 }}" class="logobrandlink w-inline-block">
+                <img src="{{ "icono7.jpg" | static_url }}"  alt="" class="marcaimg">
+              </a>
+            </div>
+          {% endif %}
+
+          {% if settings.link_8 %}
+            <div class="slidebrand w-slide">
+              <a href="{{ settings.link_8 }}" class="logobrandlink w-inline-block">
+                <img src="{{ "icono8.jpg" | static_url }}"  alt="" class="marcaimg">
+              </a>
+            </div>
+          {% endif %}
+
+          {% if settings.link_9 %}
+            <div class="slidebrand w-slide">
+              <a href="{{ settings.link_9 }}" class="logobrandlink w-inline-block">
+                <img src="{{ "icono9.jpg" | static_url }}"  alt="" class="marcaimg">
+              </a>
+            </div>
+          {% endif %}
+
+        </div>
+
+        <div class="arrowslider hiddenmobile w-slider-arrow-left">
+          <div class="iconslidermain w-icon-slider-left"></div>
+        </div>
+        <div class="arrowslider hiddenmobile w-slider-arrow-right">
+          <div class="iconslidermain w-icon-slider-right"></div>
+        </div>
+        <div class="navbrands w-slider-nav w-slider-nav-invert w-round"></div>
+
+      </div>
     </div>
   </div>

@@ -145,19 +145,96 @@ Página de inicio
 	collapse
 		title = Carrucel de marcas
 		backto = home_order_position
+	subtitle
+		subtitle = Marca 1
 	i18n_input
-		name = link_message
-		description = Link
+		name = link_1
+		description = Link icono 1
 	image
-		original = banner_boletos_opt.jpg
-		title = Cargar imagen (JPG)
-		width = 1600
-		height = 370
+		original = icono1.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	subtitle
+		subtitle = Marca 2
+	i18n_input
+		name = link_2
+		description = Link icono 2
 	image
-		original = banner_boletos_mobile_opt.jpg
-		title = Cargar imagen (JPG)
-		width = 780
-		height = 450
+		original = icono2.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	subtitle
+		subtitle = Marca 3
+	i18n_input
+		name = link_3
+		description = Link icono 3
+	image
+		original = icono3.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	subtitle
+		subtitle = Marca 4
+	i18n_input
+		name = link_4
+		description = Link icono 4
+	image
+		original = icono4.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	subtitle
+		subtitle = Marca 5
+	i18n_input
+		name = link_5
+		description = Link icono 5
+	image
+		original = icono5.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	subtitle
+		subtitle = Marca 6
+	i18n_input
+		name = link_6
+		description = Link icono 6
+	image
+		original = icono6.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	subtitle
+		subtitle = Marca 7
+	i18n_input
+		name = link_7
+		description = Link icono 7
+	image
+		original = icono7.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	subtitle
+		subtitle = Marca 8
+	i18n_input
+		name = link_8
+		description = Link icono 8
+	image
+		original = icono8.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	subtitle
+		subtitle = Marca 9
+	i18n_input
+		name = link_9
+		description = Link icono 9
+	image
+		original = icono9.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
 	collapse
 		title = Banners de Productos
 		backto = home_order_position
