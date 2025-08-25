@@ -159,6 +159,9 @@ Página de inicio
 		title = Cargar imagen (JPG,PNG)
 		width = 100
 		height = 100
+	i18n_input
+		name = icon_alt_1
+		description = Texto alternativo (alt)
 	subtitle
 		subtitle = Marca 2
 	i18n_input
@@ -169,6 +172,9 @@ Página de inicio
 		title = Cargar imagen (JPG,PNG)
 		width = 100
 		height = 100
+	i18n_input
+		name = icon_alt_2
+		description = Texto alternativo (alt)
 	subtitle
 		subtitle = Marca 3
 	i18n_input
@@ -179,6 +185,9 @@ Página de inicio
 		title = Cargar imagen (JPG,PNG)
 		width = 100
 		height = 100
+	i18n_input
+		name = icon_alt_3
+		description = Texto alternativo (alt)
 	subtitle
 		subtitle = Marca 4
 	i18n_input
@@ -189,6 +198,9 @@ Página de inicio
 		title = Cargar imagen (JPG,PNG)
 		width = 100
 		height = 100
+	i18n_input
+		name = icon_alt_4
+		description = Texto alternativo (alt)
 	subtitle
 		subtitle = Marca 5
 	i18n_input
@@ -199,6 +211,9 @@ Página de inicio
 		title = Cargar imagen (JPG,PNG)
 		width = 100
 		height = 100
+	i18n_input
+		name = icon_alt_5
+		description = Texto alternativo (alt)
 	subtitle
 		subtitle = Marca 6
 	i18n_input
@@ -209,6 +224,9 @@ Página de inicio
 		title = Cargar imagen (JPG,PNG)
 		width = 100
 		height = 100
+	i18n_input
+		name = icon_alt_6
+		description = Texto alternativo (alt)
 	subtitle
 		subtitle = Marca 7
 	i18n_input
@@ -219,6 +237,9 @@ Página de inicio
 		title = Cargar imagen (JPG,PNG)
 		width = 100
 		height = 100
+	i18n_input
+		name = icon_alt_7
+		description = Texto alternativo (alt)
 	subtitle
 		subtitle = Marca 8
 	i18n_input
@@ -229,6 +250,9 @@ Página de inicio
 		title = Cargar imagen (JPG,PNG)
 		width = 100
 		height = 100
+	i18n_input
+		name = icon_alt_9
+		description = Texto alternativo (alt)
 	subtitle
 		subtitle = Marca 9
 	i18n_input
@@ -239,6 +263,126 @@ Página de inicio
 		title = Cargar imagen (JPG,PNG)
 		width = 100
 		height = 100
+	i18n_input
+		name = icon_alt_9
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 10
+	i18n_input
+		name = link_10
+		description = Link icono 10
+	image
+		original = icono10.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_10
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 11
+	i18n_input
+		name = link_11
+		description = Link icono 11
+	image
+		original = icono11.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_11
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 12
+	i18n_input
+		name = link_12
+		description = Link icono 12
+	image
+		original = icono12.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_12
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 13
+	i18n_input
+		name = link_13
+		description = Link icono 13
+	image
+		original = icono13.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_13
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 14
+	i18n_input
+		name = link_14
+		description = Link icono 14
+	image
+		original = icono14.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_14
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 15
+	i18n_input
+		name = link_15
+		description = Link icono 15
+	image
+		original = icono15.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_15
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 16
+	i18n_input
+		name = link_16
+		description = Link icono 16
+	image
+		original = icono16.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_16
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 17
+	i18n_input
+		name = link_17
+		description = Link icono 17
+	image
+		original = icono17.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_17
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 18
+	i18n_input
+		name = link_18
+		description = Link icono 18
+	image
+		original = icono18.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_18
+		description = Texto alternativo (alt)
 	collapse
 		title = Banners de productos
 		backto = home_order_position
