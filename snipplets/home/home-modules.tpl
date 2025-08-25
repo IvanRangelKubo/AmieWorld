@@ -10,7 +10,7 @@
           </div>
 
           <p class="introblog">{{ settings.blog_description }}</p>
-          <a href="{{ store.blog }}" class="comprarbtn blog w-button">Ver Blog</a>
+          <a href="/blog" class="comprarbtn blog w-button">Ver Blog</a>
           
         </div>
 
@@ -18,44 +18,27 @@
           <div data-delay="5000" data-animation="slide" class="blogslider w-slider" data-autoplay="true" data-easing="ease-in-out" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="600" data-infinite="true">
             
             <div class="maskblog w-slider-mask">
-
-              <div class="entryslide w-slide">
-                <div class="entrycont">
-                  <div id="w-node-_25b0f977-cabd-95db-18f5-b9697890f21e-40132ca6" class="w-layout-layout stackentry wf-layout-layout">
-                    <div class="w-layout-cell imgcellentry">
-                      <div class="imgentrydiv"></div>
-                    </div>
-                    <div class="w-layout-cell">
-                      <div class="infominblog">
-                        <div class="dateentryblog">30/07/2025</div>
-                        <h5 class="titleentry">El secreto para una piel radiante que amamos ✨ Aquí descubrirás lo mejor del skincare</h5>
-                        <p class="excerptblog">Bienvenidx a Amie World, tu espacio de belleza y cuidado personal 🌸 Aquí descubrirás lo mejor del skincare coreano, tips, reseñas y secretos para cuidar tu piel con ingredientes innovadores y rutinas que se adaptan a ti.</p>
-                        <a href="#" class="readmoreblog">Leer más</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div>
+                <p>TEsting</p>
               </div>
-
-              <div class="entryslide w-slide">
-                <div class="entrycont">
-                  <div id="w-node-_575229d4-84ac-cb8f-62a7-162ef38c1679-40132ca6" class="w-layout-layout stackentry wf-layout-layout">
-                    <div class="w-layout-cell imgcellentry">
-                      <div class="imgentrydiv"></div>
-                    </div>
-                    <div class="w-layout-cell">
-                      <div class="infominblog">
-                        <div class="dateentryblog">30/07/2025</div>
-                        <h5 class="titleentry">El secreto para una piel radiante que amamos ✨ Aquí descubrirás lo mejor del skincare</h5>
-                        <p class="excerptblog">Bienvenidx a Amie World, tu espacio de belleza y cuidado personal 🌸 Aquí descubrirás lo mejor del skincare coreano, tips, reseñas y secretos para cuidar tu piel con ingredientes innovadores y rutinas que se adaptan a ti.</p>
-                        <a href="#" class="readmoreblog">Leer más</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+              {% for post in blog.posts %}
+              {{ component(
+                  'blog/blog-post-item', {
+                      image_lazy: true,
+                      image_lazy_js: true,
+                      post_item_classes: {
+                          item: 'w-layout-layout stackblog wf-layout-layout',
+                          image_container: 'w-layout-cell',
+                          image: 'linkimg-blog w-inline-block',
+                          title: 'titulo-entryblog',
+                          summary: 'post-excerpt',
+                          read_more: 'readmore-blogpost',
+                      },
+                  })
+              }}
+              {% endfor %}
             </div>
+
 
             <div class="arrowslider hiddenmobile w-slider-arrow-left">
               <div class="iconslidermain w-icon-slider-left"></div>
