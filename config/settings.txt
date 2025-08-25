@@ -479,6 +479,9 @@ Página de inicio
 		name =	reviews_section_title
 	subtitle
 		subtitle = Reseña 1
+	checkbox
+		name = review_01_show
+		description = Mostrar reseña
 	i18n_input
 		name = review_name_1
 		description = Nombre del usuario
@@ -490,6 +493,9 @@ Página de inicio
 		description = Reseña
 	subtitle
 		subtitle = Reseña 2
+	checkbox
+		name = review_02_show
+		description = Mostrar reseña
 	i18n_input
 		name = review_name_2
 		description = Nombre del usuario
@@ -498,6 +504,62 @@ Página de inicio
 		description = Ciudad
 	textarea
 		name = review_2
+		description = Reseña
+	subtitle
+		subtitle = Reseña 3
+	checkbox
+		name = review_03_show
+		description = Mostrar reseña
+	i18n_input
+		name = review_name_3
+		description = Nombre del usuario
+	i18n_input
+		name = review_city_3
+		description = Ciudad
+	textarea
+		name = review_3
+		description = Reseña
+	subtitle
+		subtitle = Reseña 4
+	checkbox
+		name = review_04_show
+		description = Mostrar reseña
+	i18n_input
+		name = review_name_4
+		description = Nombre del usuario
+	i18n_input
+		name = review_city_4
+		description = Ciudad
+	textarea
+		name = review_4
+		description = Reseña
+	subtitle
+		subtitle = Reseña 5
+	checkbox
+		name = review_05_show
+		description = Mostrar reseña
+	i18n_input
+		name = review_name_5
+		description = Nombre del usuario
+	i18n_input
+		name = review_city_5
+		description = Ciudad
+	textarea
+		name = review_5
+		description = Reseña
+	subtitle
+		subtitle = Reseña 6
+	checkbox
+		name = review_06_show
+		description = Mostrar reseña
+	i18n_input
+		name = review_name_6
+		description = Nombre del usuario
+	i18n_input
+		name = review_city_6
+		description = Ciudad
+	textarea
+		name = review_6
 		description = Reseña
 	collapse
 		title = Pop-up promocional
