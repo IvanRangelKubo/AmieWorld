@@ -312,68 +312,15 @@ Página de inicio
 	subtitle
 		subtitle = <a target='_blank' href='/admin/themes/settings/product_order/'>Elegí cuáles vas a destacar</a>
 	collapse
-		title = Ubicaciones de tiendas
+		title = Blog
 		backto = home_order_position
-	subtitle
-		subtitle = Informacion General
 	i18n_input
-		name = stores_title
-		description = Titulo
+		name = blog_section_title
+		description = Titulo de seccion
 	subtitle
 		subtitle = Descripcion
 	textarea
-		name = stores_description
-	i18n_input
-		name = week_time
-		description = Horario L-V
-	i18n_input
-		name = weekend_time
-		description = Horarios S-D
-	subtitle
-		subtitle = Tienda 1
-	i18n_input
-		name = store_1_name
-		description = Nombre de la tienda
-	image
-		original = store1.jpg
-		width = 600
-		height = 600
-	i18n_input
-		name = store_1_address
-		description = Direccion
-	i18n_input
-		name = store_1_link
-		description = Link Google Maps
-	subtitle
-		subtitle = Tienda 2
-	i18n_input
-		name = store_2_name
-		description = Nombre de la tienda
-	image
-		original = store2.jpg
-		width = 600
-		height = 600
-	i18n_input
-		name = store_2_address
-		description = Direccion
-	i18n_input
-		name = store_2_link
-		description = Link Google Maps
-	subtitle
-		subtitle = Tienda 3
-	i18n_input
-		name = store_3_name
-		description = Nombre de la tienda
-	image
-		original = store3.jpg
-		width = 600
-		height = 600
-	i18n_input
-		name = store_3_address
-		description = Direccion
-	i18n_input
-		name = store_3_link
-		description = Link Google Maps
+		name = blog_description
 	collapse
 		title = Publicaciones de Instagram
 		backto = home_order_position
@@ -443,7 +390,7 @@ Página de inicio
 			products = Productos destacados
 			informatives = Garantias
 			categories = Banners de productos
-			modules = Ubicaciones de tiendas
+			modules = Blog
 			video = Reseñas
 			instafeed = Publicaciones de Instagram
 	link
