@@ -465,6 +465,86 @@ Página de inicio
 		subtitle = Descripcion
 	textarea
 		name = blog_description
+	subtitle
+		subtitle = Articulo 1
+	checkbox
+		name = show_article_1
+		description = Mostrar Articulo
+	image
+		original = article_1.jpg
+    title = Cargar imagen (JPG, PNG)
+    width = 600
+	i18n_input
+		name = blog_section_date_1
+		description = Fecha
+	i18n_input
+		name = blog_section_title_1
+		description = Titulo y Resumen
+	textarea
+		name = blog_article_1
+	i18n_input
+		name = blog_section_link_1
+		description = Link al blog
+	subtitle
+		subtitle = Articulo 2
+	checkbox
+		name = show_article_2
+		description = Mostrar Articulo
+	image
+		original = article_2.jpg
+    title = Cargar imagen (JPG, PNG)
+    width = 600
+	i18n_input
+		name = blog_section_date_2
+		description = Fecha
+	i18n_input
+		name = blog_section_title_2
+		description = Titulo y Resumen
+	textarea
+		name = blog_article_2
+	i18n_input
+		name = blog_section_link_2
+		description = Link al blog
+	subtitle
+		subtitle = Articulo 3
+	checkbox
+		name = show_article_3
+		description = Mostrar Articulo
+	image
+		original = article_3.jpg
+    title = Cargar imagen (JPG, PNG)
+    width = 600
+	i18n_input
+		name = blog_section_date_3
+		description = Fecha
+	i18n_input
+		name = blog_section_title_3
+		description = Titulo y Resumen
+	textarea
+		name = blog_article_3
+	i18n_input
+		name = blog_section_link_3
+		description = Link al blog
+	subtitle
+		subtitle = Articulo 4
+	checkbox
+		name = show_article_4
+		description = Mostrar Articulo
+	image
+		original = article_4.jpg
+    title = Cargar imagen (JPG, PNG)
+    width = 600
+	i18n_input
+		name = blog_section_date_4
+		description = Fecha
+	i18n_input
+		name = blog_section_title_4
+		description = Titulo y Resumen
+	textarea
+		name = blog_article_4
+	i18n_input
+		name = blog_section_link_4
+		description = Link al blog
 	collapse
 		title = Publicaciones de Instagram
 		backto = home_order_position
