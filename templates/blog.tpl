@@ -1,36 +1,64 @@
-<div class="container-blog-listing">
+<div class="secclistblog">
+    <div class="customcontainer">
 
-    <div class="header-blog" style="background-image: url('{{ "banner_blog.jpg" | static_url }}');" >
-        <div class="custom-container">
-        <h1 class="maintitle white">{{ settings.blog_title }}</h1>
+        <div class="secctitles">
+            <div class="linetitle"></div>
+            <h1 class="maintitle internas">{{ settings.blog_title }}</h1>
+            <div class="linetitle"></div>
         </div>
-    </div>
 
-    <div class="custom-container">
-        <div class="rowlist-blog w-row">
+        <p class="introblog">Bienvenid@ a nuestro blog, el rincón donde la pasión por el skincare coreano y el cuidado personal se encuentran. Aquí encontrarás tips, consejos, lanzamientos y todo lo que necesitas para consentir tu piel y sentirte increíble. Porque en Amie, creemos que cuidar de ti es la mejor forma de brillar. </p>
+        <a data-w-id="b2967ce7-bd11-ea86-daf0-02a59c529577" href="#" class="vertagsbtn w-button">Ver Categorías</a>
 
-        <div class="w-col w-col-8 w-col-small-6">
+        <div class="cont-tagsblog">
+            <a href="#" class="tagblog">Ver todo</a>
+            <a href="#" class="tagblog selected">Ingredientes</a>
+            <a href="#" class="tagblog">Formulaciones</a>
+            <a href="#" class="tagblog">Tendencias</a>
+            <a href="#" class="tagblog">Webinar / Masterclass</a>
+            <a href="#" class="tagblog">Estilo de vida</a>
+            <a href="#" class="tagblog">Tips skincare</a>
+        </div>
 
+        <div class="listingposts">
+            
             {% for post in blog.posts %}
-            {{ component(
-                'blog/blog-post-item', {
-                    image_lazy: true,
-                    image_lazy_js: true,
-                    post_item_classes: {
-                        item: 'w-layout-layout stackblog wf-layout-layout',
-                        image_container: 'w-layout-cell',
-                        image: 'linkimg-blog w-inline-block',
-                        title: 'titulo-entryblog',
-                        summary: 'post-excerpt',
-                        read_more: 'readmore-blogpost',
-                    },
-                })
-            }}
+                <div class="entrycont listing">
+                    {{ component(
+                        'blog/blog-post-item', {
+                            image_lazy: true,
+                            image_lazy_js: true,
+                            post_item_classes: {
+                                item: 'w-layout-layout stackentry listing wf-layout-layout',
+                                image_container: 'w-layout-cell',
+                                image: '',
+                                title: 'titleentry',
+                                summary: 'excerptblog',
+                                read_more: 'readmoreblog',
+                            },
+                        })
+                    }}
+                </div>
             {% endfor %}
-
-        </div>
             
         </div>
-    </div>
 
+    </div>
 </div>
+
+<style>
+
+    .post-item.w-layout-layout.stackentry.listing.wf-layout-layout {
+        display: flex !important;
+        align-items: center;
+    }
+
+    .post-item-information {
+        width: 50% !important;
+    }
+
+    .post-item-image-container.w-layout-cell.imgcellentry,.post-item-image-container.w-layout-cell {
+        width: 50% !important;
+    }
+
+</style>
