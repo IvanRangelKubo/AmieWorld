@@ -42,11 +42,17 @@
 {# Notifications #}
 
 {# Modal Search #}
-{% embed "snipplets/modal.tpl" with{modal_id: 'nav-search', modal_position: 'right', modal_transition: 'slide', modal_width: 'docked-md' } %}
+{% embed "snipplets/modal.tpl" with{modal_id: 'nav-search', modal_class: 'searchcont w-form', modal_header_class: 'hide' , modal_position: 'right', modal_transition: 'slide', modal_width: 'docked-md' } %}
     {% block modal_body %}
         {% snipplet "header/header-search.tpl" %}
     {% endblock %}
 {% endembed %}
+
+<style>
+    .js-modal-close.modal-header.hide {
+        display: none;
+    }
+</style>
 
 {% if not store.is_catalog and settings.ajax_cart and template != 'cart' %}           
     {# Cart Ajax #}

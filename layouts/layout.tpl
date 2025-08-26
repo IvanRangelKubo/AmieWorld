@@ -131,7 +131,7 @@
         </style>
 
         <style>
-            .js-head-main.section-headercust.head-transparent {
+            .js-head-main.section-headercust {
                 position: sticky;
                 top: 0;
                 z-index: 9999;
