@@ -62,19 +62,19 @@
 
 									{% if settings.tiktok_url %}
 										<a href="{{ settings.tiktok_url }}" target="_blank" class="footerlink w-inline-block">
-											<img src="{{ "images/icon_tiktok.svg" | static_url }}" alt="TikTok" class="footericon">
+											<img src="{{ "images/icon_tik.svg" | static_url }}" alt="TikTok" class="footericon">
 										</a>
 									{% endif %}
 
 									{% if settings.instagram_url %}
 										<a href="{{ settings.instagram_url }}" target="_blank" class="footerlink w-inline-block">
-											<img src="{{ "images/icon_instagram.svg" | static_url }}" alt="Instagram" class="footericon">
+											<img src="{{ "images/icon_insta.svg" | static_url }}" alt="Instagram" class="footericon">
 										</a>
 									{% endif %}
 
 									{% if settings.facebook_url %}
 										<a href="{{ settings.facebook_url }}" class="footerlink w-inline-block">
-											<img src="{{ "images/icon_meta.svg" | static_url }}" alt="Facebook" class="footericon">
+											<img src="{{ "images/icon_facebook.svg" | static_url }}" alt="Facebook" class="footericon">
 										</a>
 									{% endif %}
 
