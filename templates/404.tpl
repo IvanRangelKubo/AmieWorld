@@ -8,11 +8,12 @@
 		{% snipplet 'defaults/show_help_product.tpl' %}
 	</div>
 {% else %}
-	<section id="404">
-		<div class="custom-container">
-			<div class="not-found-div"><img alt="" src="{{"images/notfound.svg" | static_url}}" class="img-search">
-				<h1 class="no-reults-txt"><strong class="bold-no-reults">LO SENTIMOS</strong><br>Tu búsqueda no produjo ningún resultado, intenta nuevamente con otra palabra.</h1>
-			</div>
+	<section id="404" class="productslist">
+		<div class="customcontainer" >
+			<div class="not-found-div">
+        <img src="{{ "images/notfount_icon.svg" | static_url }}" alt="Not found icon" class="imgsearch">
+        <h3 class="no-reults-txt">LO SENTIMOS<br>La pagina que estas buscando, no existe.</h3>
+      </div>
 		</div>
 	</section>
 {% endif %}

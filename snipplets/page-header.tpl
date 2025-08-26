@@ -11,9 +11,10 @@
 #}
 
 {% if template == 'category' or template == 'search' %}
-  <div class="lisitnglinkbanner">
-    <div class="contitlelisting">
-      <div class="txtresults">{% block page_header_text %}{% endblock %}</div>
+  <div class="headerlist">
+    <div class="customcontainer">
+      <h1 class="titlelisting">{% block page_header_text %}{% endblock %}</h1>
+      {% include "snipplets/breadcrumbs.tpl" %}
     </div>
   </div>
 {% endif %}
