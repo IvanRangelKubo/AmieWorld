@@ -907,7 +907,7 @@ DOMContentLoaded.addEventOrExecute(() => {
                     loadMoreButtonSelector: '.js-load-more',
                     hideWhileScrollingSelector: ".js-hide-footer-while-scrolling",
                     productsBeforeLoadMoreButton: 50,
-                    productsPerPage: 1
+                    productsPerPage: {{ settings.category_quantity_products }}
                 });
             {% endif %}
         }();

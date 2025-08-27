@@ -1,18 +1,20 @@
+{% paginate by settings.category_quantity_products %}
+
 {% set has_filters_available = products and has_filters_enabled and (filter_categories is not empty or product_filters is not empty) %}
 
 {# Only remove this if you want to take away the theme onboarding advices #}
 {% set show_help = not has_products %}
-{% paginate by 12 %}
+
 
 {% if not show_help %}
 
-
-	{% embed "snipplets/page-header.tpl" with { breadcrumbs: false } %}
+	{% embed "snipplets/page-header.tpl" with { breadcrumbs: true } %}
 		{% block page_header_text %}{{ category.name }}{% endblock page_header_text %}
 	{% endembed %}
 
-	<section class="category-body">
-		<div class="custom-container">
+	<section class="productslist">
+		<div class="customcontainer">
+
 			<div class="js-category-controls-prev category-controls-sticky-detector"></div>
 			<div class="js-category-controls row align-items-center mb-md-3 category-controls">
 				{% if products %}
@@ -48,21 +50,26 @@
 					</div>
 				{% endif %}
 			</div>
+
+			<!-- Filters -->
 			<div class="row">
 				{% include "snipplets/grid/filters.tpl" with {applied_filters: true} %}
 			</div>
+			<!-- Filters -->
 
+			<!-- Products -->
 			{% if products %}
-				<div class="js-product-table row gridlistingproducto" data-store="category-grid-{{ category.id }}">
+				<div class=" contlisting" data-store="category-grid-{{ category.id }}">
 					{% include 'snipplets/product_grid.tpl' %}
 				</div>
-				{% include 'snipplets/grid/pagination.tpl' with { infinite_scroll: true } %}
+				{% include 'snipplets/grid/pagination.tpl' with { infinite_scroll: false } %}
 			{% else %}
 				<div class="not-found-div">
 					<img alt="" src="{{ 'images/notfount_icon.svg' | static_url }}" class="imgsearch">
 					<h1 class="no-reults-txt">LO SENTIMOS<br>Tu búsqueda no produjo ningún resultado intenta nuevamente con otra palabra.</h1>
 				</div>
 			{% endif %}
+			<!-- Products -->
 		</div>
 	</section>
 {% elseif show_help %}

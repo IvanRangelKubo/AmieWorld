@@ -48,3 +48,4 @@ home_order_position_6 = modules
 home_order_position_7 = informatives
 ajax_cart = 1
 add_to_cart_recommendations = 1
+category_quantity_products = 12

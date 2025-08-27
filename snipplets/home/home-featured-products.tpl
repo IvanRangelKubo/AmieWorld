@@ -41,7 +41,6 @@
                     <div class="imgfront {% if product.images_count > 1 %}hoverOn{% endif %}"
                         style="background-image:url({{ 'images/placeholder_amieworld.webp' | static_url }})"></div>
                   {% endif %}
-                  
                 </a>
                 <a href="{{product.canonical_url}}" class="adtobag">
                   <img  src="{{ "images/addtobagicon.svg" | static_url }}" alt="" class="iconquickshop">

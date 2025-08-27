@@ -688,44 +688,25 @@ Listado de productos
 		icon = list-ul
 		advanced = true
 	title
-		title = Imagen para las categorías
-	image
-		title = Cargar imagen (JPG, GIF, PNG)
-		original = banner-products.jpg
-		width = 1580
-		height = 220
-	subtitle
-		subtitle = Podés subir una imagen diferente para cada categoría <a target='_blank' href='/admin/categories/'>desde acá</a>
-	title
 		title = Filtros
 	subtitle
 		subtitle = <span class='js-description-html'><strong>Configurá los filtros</strong> de tu tienda desde <a target='_blank' href='/admin/v2/filters' class='font-bold'>el administrador</a></span>
 	title
-		title = Productos en el listado
-	dropdown
-		name = grid_columns
-		description = Cantidad de productos por fila
-		values
-			1 = 1 en celular y 3 en computadora
-			2 = 2 en celular y 4 en computadora
-	title
 		title = Título para Productos destacados
+	title
+    title = Productos en el listado
+	dropdown
+		name = category_quantity_products
+		description = Cantidad de productos por página
+		values
+			4 = 4
+			12 = 12
+			16 = 16
+			20 = 20
+			24 = 24
 	i18n_input
 		description = Título
 		name = featured_products_title
-	title
-		title = Variantes de color
-	checkbox
-		name = product_color_variants
-		description = Mostrar variantes de color en listado de productos
-	title
-		title = Compra rápida
-	checkbox
-		name = quick_shop
-		description = Permitir que tus clientes puedan agregar productos a su carrito rápidamente desde el listado de productos
-	i18n_input
-		name = new_product
-		description = Etiqueta de producto nuevo
 
 Detalle de producto
 	meta

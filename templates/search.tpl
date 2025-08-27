@@ -1,4 +1,4 @@
-{% paginate by 1 %}
+{% paginate by settings.category_quantity_products %}
 
 {% embed "snipplets/page-header.tpl" with { breadcrumbs: false, products_count: products_count, query: query } %}
   {% block page_header_text %}
@@ -13,7 +13,7 @@
 <section class="productslist">
 	<div class="customcontainer">
 		{% if products %}
-			<div class="js-product-table row contlisting">
+			<div class="contlisting">
 				{% include 'snipplets/product_grid.tpl' %}
 			</div>
 			{% include 'snipplets/grid/pagination.tpl' with { infinite_scroll: false } %}

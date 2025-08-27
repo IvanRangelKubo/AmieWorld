@@ -11,8 +11,7 @@
 {% set slide_item = slide_item | default(false) %}
 {% set columns = settings.grid_columns %}
 
-
-<div class="js-item-product item-product contitemlista" data-product-type="list" data-product-id="{{ product.id }}" data-store="product-item-{{ product.id }}" data-component="product-list-item" data-component-value="{{ product.id }}">
+<div class="js-item-product item-product itemlisting" data-product-type="list" data-product-id="{{ product.id }}" data-store="product-item-{{ product.id }}" data-component="product-list-item" data-component-value="{{ product.id }}">
 
     {% if (settings.quick_shop or settings.product_color_variants) and not reduced_item %}
         <div class="js-product-container js-quickshop-container container-producto {% if product.variations %}js-quickshop-has-variants{% endif %}" data-variants="{{ product.variants_object | json_encode }}" data-quickshop-id="quick{{ product.id }}{% if slide_item and section_name %}-{{ section_name }}{% endif %}">
@@ -28,16 +27,36 @@
 
         <div class="item-image mb-2 contimgproducto">
             {% if not product.has_stock %}
-                  <div class="etiquetas-prod agotado">AGOTADO</div>
+                  <div class="etiquetas-prod">AGOTADO</div>
             {% endif %}
             {% if product.compare_at_price > product.price %}
                 <div class="etiquetas-prod oferta">-{{ (((product.compare_at_price - product.price) * 100) / product.compare_at_price) | round(0, 'floor') }}%</div>
             {% endif %}
+
             <div data-store="product-item-image-{{ product.id }}">
                 <a href="{{ product_url_with_selected_variant }}" title="{{ product.name }}" class="linkproducto w-inline-block">
-                    <div class="imgback" style="background-image: url('{{ product.images[1] | product_image_url('original') }}');" ></div>
-                    <div class="imgfront {% if product.images_count > 1 %}hoverOn{% endif %}" style="background-image: url('{{ item_img_srcset | product_image_url('original') }}');"></div>
+                  {% if product.images_count > 1 %}
+                    <div style="background-image:url({{ product.images[1] | product_image_url('original') }})" class="imgback" ></div>
+                  {% else %}
+                    <div style="background: transparent" class="imgback" ></div>
+                  {% endif %}
+
+                  {# armamos la URL "real" de la imagen destacada #}
+                  {% set featured_url = product.featured_image | product_image_url('original') %}
+                  {# en TN, cuando no hay imagen, la URL incluye "no-photo" #}
+                  {% set has_real_image = featured_url and ('no-photo' not in featured_url) %}
+
+                  {% if has_real_image %}
+                    <div class="imgfront {% if product.images_count > 1 %}hoverOn{% endif %}"
+                        style="background-image:url({{ featured_url }})"></div>
+                  {% else %}
+                    <div class="imgfront {% if product.images_count > 1 %}hoverOn{% endif %}"
+                        style="background-image:url({{ 'images/placeholder_amieworld.webp' | static_url }})"></div>
+                  {% endif %}
                 </a>
+                <div class="adtobag">
+                    <img loading="lazy" src="{{ "images/addtobagicon.svg" | static_url }}" class="iconquickshop">
+                </div>
             </div>
             
         </div>
@@ -75,6 +94,9 @@
 
 
         <div class="container-titleandprices">
+            <div class="contstarsreviews">
+                <img src="{{ "images/starsreviews.png" | static_url }}" class="starsreview">
+            </div>
             <div>{{product.featured_image.name}}</div>
             <a href="{{product.canonical_url}}" class="nombre-producto">{{product.name}}</a>
             <div class="precios-container">
@@ -85,8 +107,6 @@
                     <div class="precio-regular">{{ product.price | money }}</div>
                 {% endif %}  
             </div>
-            <div class="contreviews"></div>
-            <a href="{{product.canonical_url}}" class="btnagregar w-button">COMPRAR</a>
         </div>
 
     {% if (settings.quick_shop or settings.product_color_variants) and not reduced_item %}
