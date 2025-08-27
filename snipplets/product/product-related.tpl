@@ -48,23 +48,22 @@
                     <div class="etiquetas-prod oferta">-{{ (((related_product.compare_at_price - related_product.price) * 100) / related_product.compare_at_price) | round(0, 'floor') }}%</div>
                     {% endif %}
                     <a href="{{related_product.canonical_url}}" class="linkproducto w-inline-block">
-                    {% if related_product.images_count > 1 %}
-                        <div style="background-image:url({{ related_product.images[1] | product_image_url('original') }})" class="imgback" ></div>
-                    {% else %}
-                        <div style="background: transparent" class="imgback" ></div>
-                    {% endif %}
+                        {% if related_product.images_count > 1 %}
+                            <div style="background-image:url({{ related_product.images[1] | product_image_url('original') }})" class="imgback" ></div>
+                        {% else %}
+                            <div style="background: transparent" class="imgback" ></div>
+                        {% endif %}
 
-                    {# armamos la URL "real" de la imagen destacada #}
-                    {% set featured_url = related_product.featured_image | product_image_url('original') %}
-                    {# en TN, cuando no hay imagen, la URL incluye "no-photo" #}
-                    {% set has_real_image = featured_url and ('no-photo' not in featured_url) %}
+                        {# armamos la URL "real" de la imagen destacada #}
+                        {% set featured_url = related_product.featured_image | product_image_url('original') %}
+                        {# en TN, cuando no hay imagen, la URL incluye "no-photo" #}
+                        {% set has_real_image = featured_url and ('no-photo' not in featured_url) %}
 
-                    {% if has_real_image %}
-                        <div class="imgfront {% if related_product.images_count > 1 %}hoverOn{% endif %}"
-                            style="background-image:url({{ featured_url }})"></div>
-                    {% else %}
-                        <div class="imgfront {% if related_product.images_count > 1 %}hoverOn{% endif %}"
-                            style="background-image:url({{ 'images/placeholder_amieworld.webp' | static_url }})"></div>
+                        {% if has_real_image %}
+                            <div class="imgfront {% if related_product.images_count > 1 %}hoverOn{% endif %}"
+                                style="background-image:url({{ featured_url }})"></div>
+                        {% else %}
+                            <div class="imgfront {% if related_product.images_count > 1 %}hoverOn{% endif %}" style="background-image:url({{ 'images/placeholder_amieworld.webp' | static_url }})"></div>
                     {% endif %}
                     </a>
                     <a href="{{related_product.canonical_url}}" class="adtobag">
