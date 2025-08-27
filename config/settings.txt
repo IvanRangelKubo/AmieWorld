@@ -713,61 +713,329 @@ Detalle de producto
 		icon = cube
 		advanced = true
 	title
-		title = Descuento por medio de pago
-	checkbox
-		name = payment_discount_price
-		description = Mostrar el precio con mayor descuento en los listados, el detalle de producto y el carrito de compras
-	subtitle
-		subtitle = <a target='_blank' href='/admin/payments/'>Configurá descuentos para tus medios de pago.</a>
-	title
-		title = Formas de entrega
-	checkbox_global
-		name = shipping_calculator_product_page
-		description = Mostrar el calculador de costos de envío y locales físicos en la página de producto
-	subtitle
-		subtitle = <a target='_blank' href='/admin/shipping/'>Agregar medios de envío o locales físicos</a>
-	title
 		title = Variantes del producto
 	checkbox
 		name = bullet_variants
 		description = Mostrar como botones
 	title
-		title = Guía de talles
-	subtitle
-		subtitle = Cuando un producto tenga variantes de 'Talle', podés mostrar un pop-up con las medidas. Solo necesitás <a target='_blank' href='/admin/pages/'>crear una página</a> e incluir su link debajo.
-	i18n_input
-		name = size_guide_url
-		description = Link de la página
-	description
-		description = Ej: https://tudominio.com/guia-de-talles/
-	title
-		title = Último producto en stock
-	checkbox
-		name = last_product
-		description = Mostrar un mensaje para incentivar la compra cuando quede la última unidad de un producto
-	i18n_input
-		description = Mensaje
-		name = last_product_text
-	title
-		title = Facebook
-	subtitle
-		subtitle = Comentarios en el producto
-	checkbox
-		name = show_product_fb_comment_box
-		description = Permitir que tus clientes te dejen comentarios con su usuario de Facebook en la página de producto
-	text
-		name = fb_admins
-		description = ID de tu perfil de Facebook
-	subtitle
-		subtitle = Es necesario si querés moderar los comentarios. Podés obtenerlo <a target='_blank' href='https://findmyfbid.in/'>acá</a>
-	title
 		title = Productos relacionados
 	i18n_input
 		description = Título para los productos alternativos
 		name = products_related_title
+	title
+		title = Seccion "¿Por que?"
 	i18n_input
-		description = Título para los productos complementarios
-		name = products_complementary_title
+		description = Titulo de la seccion
+		name = products_why_title
+	subtitle
+		subtitle = Razon 1
+	image
+		original = why1.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Descripcion
+		name = razon_1
+	subtitle
+		subtitle = Razon 2
+	image
+		original = why2.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Descripcion
+		name = razon_2
+	subtitle
+		subtitle = Razon 3
+	image
+		original = why3.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Descripcion
+		name = razon_3
+	subtitle
+		subtitle = Razon 4
+	image
+		original = why4.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Descripcion
+		name = razon_4
+	title
+		title = Seccion "Marcas"
+	i18n_input
+		description = Titulo de la seccion
+		name = products_brands_title
+	subtitle
+		subtitle = Marca 1
+	checkbox
+		name = show_product_brand_1
+		description = Mostrar Marca
+	image
+		original = product_brand_1.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_1_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_1
+	subtitle
+		subtitle = Marca 2
+	checkbox
+		name = show_product_brand_2
+		description = Mostrar Marca
+	image
+		original = product_brand_2.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_2_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_2
+
+	subtitle
+		subtitle = Marca 3
+	checkbox
+		name = show_product_brand_3
+		description = Mostrar Marca
+	image
+		original = product_brand_3.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_3_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_3
+
+	subtitle
+		subtitle = Marca 4
+	checkbox
+		name = show_product_brand_4
+		description = Mostrar Marca
+	image
+		original = product_brand_4.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_4_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_4
+
+	subtitle
+		subtitle = Marca 5
+	checkbox
+		name = show_product_brand_5
+		description = Mostrar Marca
+	image
+		original = product_brand_5.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_5_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_5
+
+	subtitle
+		subtitle = Marca 6
+	checkbox
+		name = show_product_brand_6
+		description = Mostrar Marca
+	image
+		original = product_brand_6.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_6_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_6
+
+	subtitle
+		subtitle = Marca 7
+	checkbox
+		name = show_product_brand_7
+		description = Mostrar Marca
+	image
+		original = product_brand_7.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_7_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_7
+
+	subtitle
+		subtitle = Marca 8
+	checkbox
+		name = show_product_brand_8
+		description = Mostrar Marca
+	image
+		original = product_brand_8.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_8_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_8
+
+	subtitle
+		subtitle = Marca 9
+	checkbox
+		name = show_product_brand_9
+		description = Mostrar Marca
+	image
+		original = product_brand_9.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_9_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_9
+
+	subtitle
+		subtitle = Marca 10
+	checkbox
+		name = show_product_brand_10
+		description = Mostrar Marca
+	image
+		original = product_brand_10.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_10_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_10
+
+	subtitle
+		subtitle = Marca 11
+	checkbox
+		name = show_product_brand_11
+		description = Mostrar Marca
+	image
+		original = product_brand_11.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_11_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_11
+
+	subtitle
+		subtitle = Marca 12
+	checkbox
+		name = show_product_brand_12
+		description = Mostrar Marca
+	image
+		original = product_brand_12.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_12_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_12
+
+	subtitle
+		subtitle = Marca 13
+	checkbox
+		name = show_product_brand_13
+		description = Mostrar Marca
+	image
+		original = product_brand_13.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_13_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_13
+
+	subtitle
+		subtitle = Marca 14
+	checkbox
+		name = show_product_brand_14
+		description = Mostrar Marca
+	image
+		original = product_brand_14.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_14_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_14
+
+	subtitle
+		subtitle = Marca 15
+	checkbox
+		name = show_product_brand_15
+		description = Mostrar Marca
+	image
+		original = product_brand_15.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_15_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_15
+
+	subtitle
+		subtitle = Marca 16
+	checkbox
+		name = show_product_brand_16
+		description = Mostrar Marca
+	image
+		original = product_brand_16.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_16_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_16
+
+	subtitle
+		subtitle = Marca 17
+	checkbox
+		name = show_product_brand_17
+		description = Mostrar Marca
+	image
+		original = product_brand_17.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_17_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_17
+
+	subtitle
+		subtitle = Marca 18
+	checkbox
+		name = show_product_brand_18
+		description = Mostrar Marca
+	image
+		original = product_brand_18.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_18_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_18
+
+	
+
+	
 
 Carrito de compras
 	meta

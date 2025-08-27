@@ -31,41 +31,63 @@
 {% endif %}
 
 <div class="seccrecomendados">
-  <div class="custom-container">
-    <div class="maintitle-cont">
-      <h2 class="maintitle">PRODUCTOS <span class="redtxttitle">RECOMENDADOS</span></h2>
-    </div>
-    <div class="code-embed w-embed">
+  <div class="customcontainer">
+        <div class="secctitles">
+          <h1 class="maintitle">{{ settings.products_related_title }}</h1>
+          <div class="linetitle"></div>
+        </div>
+    <div class="w-embed">
         <div class="owl-carousel productosowl owl-theme" id="sync2">
             {% for related_product in related_products %}
                 <div class="container-producto">
-                    <div class="contimgproducto">
-                    {% if related_product.stock == 0 %}
-                        <div class="etiquetas-prod agotado">AGOTADO</div>
-                    {% elseif related_product.discount > 0 %}
-                        <div class="etiquetas-prod oferta">-{{ related_product.discount }}%</div>
+                <div class="contimgproducto">
+                    {% if not related_product.has_stock %}
+                    <div class="etiquetas-prod">AGOTADO</div>
                     {% endif %}
-                    <a href="{{ related_product.url }}" class="linkproducto w-inline-block">
-                        <div class="imgback" style="background-image: url('{{ related_product.images[1] | product_image_url('original') }}');"></div>
-                        <div class="imgfront {% if product.images_count > 1 %}hoverOn{% endif %}" style="background-image: url('{{ related_product.featured_image | product_image_url('original') }}');"></div>
-                    </a>
-                    </div>
-                    <div class="container-titleandprices">
-                    <a href="{{ related_product.url }}" class="nombre-producto">{{ related_product.name }}</a>
-
-                    <div class="precios-container">
-                    {% if product.compare_at_price or product.promotional_offer %}
-                      <div class="precio-regular">{{ product.compare_at_price | money }}</div>
-                      <div class="precio-oferta">{{ product.price | money }}</div>
+                    {% if related_product.compare_at_price > related_product.price %}
+                    <div class="etiquetas-prod oferta">-{{ (((related_product.compare_at_price - related_product.price) * 100) / related_product.compare_at_price) | round(0, 'floor') }}%</div>
+                    {% endif %}
+                    <a href="{{related_product.canonical_url}}" class="linkproducto w-inline-block">
+                    {% if related_product.images_count > 1 %}
+                        <div style="background-image:url({{ related_product.images[1] | product_image_url('original') }})" class="imgback" ></div>
                     {% else %}
-                      <div class="precio-regular">{{ product.price | money }}</div>
-                    {% endif %}  </div>
+                        <div style="background: transparent" class="imgback" ></div>
+                    {% endif %}
 
-                    <div class="contreviews"></div>
-                    <a href="{{ related_product.add_to_cart_url }}" class="btnagregar w-button">COMPRAR</a>
-                    </div>
+                    {# armamos la URL "real" de la imagen destacada #}
+                    {% set featured_url = related_product.featured_image | product_image_url('original') %}
+                    {# en TN, cuando no hay imagen, la URL incluye "no-photo" #}
+                    {% set has_real_image = featured_url and ('no-photo' not in featured_url) %}
+
+                    {% if has_real_image %}
+                        <div class="imgfront {% if related_product.images_count > 1 %}hoverOn{% endif %}"
+                            style="background-image:url({{ featured_url }})"></div>
+                    {% else %}
+                        <div class="imgfront {% if related_product.images_count > 1 %}hoverOn{% endif %}"
+                            style="background-image:url({{ 'images/placeholder_amieworld.webp' | static_url }})"></div>
+                    {% endif %}
+                    </a>
+                    <a href="{{related_product.canonical_url}}" class="adtobag">
+                    <img  src="{{ "images/addtobagicon.svg" | static_url }}" alt="" class="iconquickshop">
+                    </a>
                 </div>
-                
+
+                <div class="container-titleandprices">
+                    <div class="contstarsreviews"></div>
+                    <div>{{related_product.featured_image.name}}</div>
+                    <a href="{{related_product.canonical_url}}" class="nombre-producto">{{related_product.name}}</a>
+                    <div class="precios-container">
+                        {% if related_product.compare_at_price or related_product.promotional_offer %}
+                        <div class="precio-regular">{{ related_product.compare_at_price | money }}</div>
+                        <div class="precio-oferta">{{ related_product.price | money }}</div>
+                        {% else %}
+                        <div class="precio-regular">{{ related_product.price | money }}</div>
+                        {% endif %}  
+                    </div>
+        
+                </div>
+
+                </div>        
             {% endfor %}
         </div>
     </div>
