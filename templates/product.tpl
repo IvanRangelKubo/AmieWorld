@@ -130,6 +130,15 @@
     ul.breadcrumbs.arbol-navegacion.vip {
         justify-content: flex-start;
     }
+
+    .swiper-wrapper {
+        max-height: 600px;
+    }
+
+    .vipImage {
+        max-height: 600px;
+        object-fit: cover;
+    }
 </style>
 
 
