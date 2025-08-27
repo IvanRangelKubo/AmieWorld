@@ -692,8 +692,6 @@ Listado de productos
 	subtitle
 		subtitle = <span class='js-description-html'><strong>Configurá los filtros</strong> de tu tienda desde <a target='_blank' href='/admin/v2/filters' class='font-bold'>el administrador</a></span>
 	title
-		title = Título para Productos destacados
-	title
     title = Productos en el listado
 	dropdown
 		name = category_quantity_products
@@ -704,6 +702,8 @@ Listado de productos
 			16 = 16
 			20 = 20
 			24 = 24
+	title
+		title = Título para Productos destacados
 	i18n_input
 		description = Título
 		name = featured_products_title
