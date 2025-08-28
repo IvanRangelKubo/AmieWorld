@@ -139,6 +139,10 @@
         max-height: 600px;
         object-fit: cover;
     }
+
+    .w-row.section-single-product {
+        margin: 0;
+    }
 </style>
 
 

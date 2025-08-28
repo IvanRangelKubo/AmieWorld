@@ -116,6 +116,12 @@
             text-transform: none;
         }
 
+        .pdescrip {
+            height: 150px !important;
+        }
+
+        
+
     </style>
 
     <script>
@@ -131,6 +137,29 @@
                 shareContent.style.display = "block";
             } else {
                 shareContent.style.display = "none";
+            }
+            });
+        }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const wrapper = document.getElementById("barritadescrip");
+
+        if (wrapper) {
+            // Encuentra nodos huérfanos fuera del <p>
+            const children = Array.from(wrapper.childNodes);
+            children.forEach(node => {
+            if (node.nodeType === 1 && !node.classList.contains("pdescrip")) {
+                // lo meto dentro del <p>
+                let p = wrapper.querySelector(".pdescrip");
+                if (!p) {
+                p = document.createElement("p");
+                p.className = "pdescrip";
+                wrapper.appendChild(p);
+                }
+                p.appendChild(node);
             }
             });
         }
