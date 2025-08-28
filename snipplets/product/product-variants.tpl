@@ -1,8 +1,7 @@
 <div class="js-product-variants{% if quickshop %} js-product-quickshop-variants text-left{% endif %} form-row">
-
 	{% set has_size_variations = false %}
 	{% if settings.bullet_variants %}
-		{% set hidden_variant_select = 'hide' %}
+		{% set hidden_variant_select = ' d-none' %}
 	{% endif %}
 	{% for variation in product.variations %}
 		<div class="js-product-variants-group {% if variation.name in ['Color', 'Cor'] %}js-color-variants-container{% endif %} {% if settings.bullet_variants %}col-12 mb-2 text-center {% if not quickshop %}text-md-left{% endif %}{% else %}{% if loop.length == 3 %} {% if quickshop %}col-4{% else %}col-12{% endif %} col-md-4 {% elseif loop.length == 2 %} col-6 {% else %} col {% if quickshop %}col-md-12{% else %}col-md-6{% endif %}{% endif %}{% endif %}" data-variation-id="{{ variation.id }}">
@@ -15,11 +14,11 @@
 			{% endembed %}
 			{% if settings.bullet_variants %}
 					<div class="text-center {% if not quickshop %}text-md-left{% endif %}">
-						<label class="form-label mb-3">{{ variation.name }}</label>
+						<label class="form-label mb-3 variantName">{{ variation.name }}</label>
 					</div>
 					<div class="text-center {% if not quickshop %}text-md-left{% endif %}">
 						{% for option in variation.options if option.custom_data %}
-							<a data-option="{{ option.id }}" class="js-insta-variant btn btn-variant{% if product.default_options[variation.id] is same as(option.id) %} selected{% endif %}{% if variation.name in ['Color', 'Cor'] %} btn-variant-color{% endif %}" title="{{ option.name }}" data-option="{{ option.id }}" data-variation-id="{{ variation.id }}">
+							<a data-option="{{ option.id }}" class="js-insta-variant btn btn-variant{% if product.default_options[variation.id] is same as(option.id) %} selected{% endif %}{% if variation.name in ['Color', 'Cor'] %} btn-variant-color{% endif %} varname-detail" title="{{ option.name }}" data-option="{{ option.id }}" data-variation-id="{{ variation.id }}">
 								<span class="btn-variant-content"{% if variation.name in ['Color', 'Cor'] %} style="background: {{ option.custom_data }}; border: 1px solid #eee"{% endif %} data-name="{{ option.name }}">
 								{% if not(variation.name in ['Color', 'Cor']) %}
 									{{ option.name }}
@@ -28,7 +27,7 @@
 							</a>
 						{% endfor %}
 						{% for option in variation.options if not option.custom_data %}
-							<a data-option="{{ option.id }}" class="js-insta-variant btn btn-variant{% if product.default_options[variation.id] is same as(option.id) %} selected{% endif %}" data-variation-id="{{ variation.id }}">
+							<a data-option="{{ option.id }}" class="js-insta-variant btn btn-variant{% if product.default_options[variation.id] is same as(option.id) %} selected{% endif %} varname-detail" data-variation-id="{{ variation.id }}">
 								<span class="btn-variant-content" data-name="{{ option.name }}">{{ option.name }}</span>
 							</a>
 						{% endfor %}
@@ -66,3 +65,28 @@
 		{% endfor %}
 	{% endif %}
 </div>
+
+<style>
+	.variantName {
+    display: none;
+	}
+
+	.btn-variant-content{
+		line-height: 6px;
+	}
+
+	.btn-variant.selected {
+    background-color: var(--darkgrey);
+    color: var(--white);
+    border-width: 1px;
+    border-color: #245346;
+    text-decoration: none;
+	}
+
+	.varname-detail:hover {
+    background-color: var(--darkgrey);
+    color: var(--white);
+    border-color: #245346;
+	}
+
+</style>

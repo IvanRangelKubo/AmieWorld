@@ -792,7 +792,6 @@ Detalle de producto
 	i18n_input
 		description = Link de la marca
 		name = product_brand_link_2
-
 	subtitle
 		subtitle = Marca 3
 	checkbox
@@ -807,7 +806,6 @@ Detalle de producto
 	i18n_input
 		description = Link de la marca
 		name = product_brand_link_3
-
 	subtitle
 		subtitle = Marca 4
 	checkbox
@@ -822,7 +820,6 @@ Detalle de producto
 	i18n_input
 		description = Link de la marca
 		name = product_brand_link_4
-
 	subtitle
 		subtitle = Marca 5
 	checkbox
@@ -837,7 +834,6 @@ Detalle de producto
 	i18n_input
 		description = Link de la marca
 		name = product_brand_link_5
-
 	subtitle
 		subtitle = Marca 6
 	checkbox
@@ -852,7 +848,6 @@ Detalle de producto
 	i18n_input
 		description = Link de la marca
 		name = product_brand_link_6
-
 	subtitle
 		subtitle = Marca 7
 	checkbox
@@ -867,7 +862,6 @@ Detalle de producto
 	i18n_input
 		description = Link de la marca
 		name = product_brand_link_7
-
 	subtitle
 		subtitle = Marca 8
 	checkbox
@@ -882,7 +876,6 @@ Detalle de producto
 	i18n_input
 		description = Link de la marca
 		name = product_brand_link_8
-
 	subtitle
 		subtitle = Marca 9
 	checkbox
@@ -897,7 +890,6 @@ Detalle de producto
 	i18n_input
 		description = Link de la marca
 		name = product_brand_link_9
-
 	subtitle
 		subtitle = Marca 10
 	checkbox
@@ -912,7 +904,6 @@ Detalle de producto
 	i18n_input
 		description = Link de la marca
 		name = product_brand_link_10
-
 	subtitle
 		subtitle = Marca 11
 	checkbox
@@ -927,7 +918,6 @@ Detalle de producto
 	i18n_input
 		description = Link de la marca
 		name = product_brand_link_11
-
 	subtitle
 		subtitle = Marca 12
 	checkbox
@@ -942,7 +932,6 @@ Detalle de producto
 	i18n_input
 		description = Link de la marca
 		name = product_brand_link_12
-
 	subtitle
 		subtitle = Marca 13
 	checkbox
@@ -957,7 +946,6 @@ Detalle de producto
 	i18n_input
 		description = Link de la marca
 		name = product_brand_link_13
-
 	subtitle
 		subtitle = Marca 14
 	checkbox
@@ -972,7 +960,6 @@ Detalle de producto
 	i18n_input
 		description = Link de la marca
 		name = product_brand_link_14
-
 	subtitle
 		subtitle = Marca 15
 	checkbox
@@ -987,7 +974,6 @@ Detalle de producto
 	i18n_input
 		description = Link de la marca
 		name = product_brand_link_15
-
 	subtitle
 		subtitle = Marca 16
 	checkbox
@@ -1002,7 +988,6 @@ Detalle de producto
 	i18n_input
 		description = Link de la marca
 		name = product_brand_link_16
-
 	subtitle
 		subtitle = Marca 17
 	checkbox
@@ -1017,7 +1002,6 @@ Detalle de producto
 	i18n_input
 		description = Link de la marca
 		name = product_brand_link_17
-
 	subtitle
 		subtitle = Marca 18
 	checkbox
