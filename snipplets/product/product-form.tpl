@@ -67,9 +67,13 @@
             {% set state = store.is_catalog ? 'catalog' : (product.available ? product.display_price ? 'cart' : 'contact' : 'nostock') %}
             {% set texts = {'cart': "Agregar a mi bolsa", 'contact': "Consultar precio", 'nostock': "Sin stock", 'catalog': "Consultar"} %}
 
-            {# Add to cart CTA #} {# IV: Importante revisar #}
             <div class="ctavip-cont">
                 <input type="submit" style="margin: 0;" class="btn-vip w-button js-addtocart js-prod-submit-form btn btn-primary btn-block mb-4 {{ state }}" value="{{ texts[state] | translate }}" {% if state == 'nostock' %}disabled{% endif %} data-store="product-buy-button" data-component="product.add-to-cart"/>
+                {# Fake add to cart CTA visible during add to cart event #}
+                {% include 'snipplets/placeholders/button-placeholder.tpl' with {custom_class: "btn-block mb-4"} %}
+                <div class="js-added-to-cart-product-message float-leftt w-100 mb-3 text-center text-md-left" style="display: none;">
+                    {{'Ya agregaste este producto.' | translate }}<a href="#" class="js-modal-open js-fullscreen-modal-open btn btn-link ml-1" data-toggle="#modal-cart" data-modal-url="modal-fullscreen-cart">{{ 'Ver carrito' | translate }}</a>
+                </div>
             </div>
 
         </form>
@@ -120,7 +124,21 @@
             height: 150px !important;
         }
 
-        
+        .ctavip-cont {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            display: flex;
+        }
+
+        .js-added-to-cart-product-message.float-leftt.w-100.mb-3.text-center.text-md-left {
+            font-family: Montserrat, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 22px;
+        }
 
     </style>
 
