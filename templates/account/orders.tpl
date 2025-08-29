@@ -1,27 +1,47 @@
 
-<section class="seccinternas">
-    <div class="custom-container">
+<section class="seccmicuenta">
+    <div class="customcontainer">
     
-        <div class="elementos-cuenta" >
+        <div class="contmicuenta">
 
-            <div class="maintitle-cont">
-                <h2 class="maintitle">MI <span class="redtxttitle">CUENTA</span></h2>
+            <div class="secctitles internas">
+                <h1 class="maintitle internas">Mi cuenta 🌟</h1>
+                <div class="linetitle"></div>
             </div>
 
-            <a href="{{ store.customer_logout_url }}" class="ctared w-button back">Cerrar sesión</a>
+            <div class="contbtncuenta">
+                <a href="{{ store.customer_logout_url }}" class="btnmicuenta w-button">Cerrar Sesión</a>
+            </div>
 
             <div class="row-pedidos w-row" >
 
                 <div class="w-col w-col-3">
 
-                    <div class="contdetail-account">
+                    {% if customer.default_address %}
+                        <div class="contdetail-account">
+                            <h4 class="titles-micuenta">{{ 'Direcciones' | translate }}</h4>
+                        </div>
+                        <div class="cont-infodirecc w-clearfix" >
+                            <div class="infodireccion">
+                                
+                                    {{ 'MI DIRECCIÓN' | translate }}<br>
+                              
+                                
+                                    {{ customer.default_address | format_address_short }}
+                                
+                                {{ 'Ver direcciones' | translate | a_tag(store.customer_addresses_url, '', 'btndirecciones w-button') }}
+                            </div>
+                        </div>
+                    {% endif %}
+
+                    <div class="contdetail-account" style="margin-top: 20px;">
                         <h4 class="titles-micuenta">{{ 'Mis datos' | translate }}</h4>
                     </div>
 
                     <div class="cont-infodirecc w-clearfix">
                         <div class="infodireccion">
                             <span>
-                                <strong>{{ 'Nombre' | translate }}:</strong> {{ customer.name }}
+                                {{ customer.name }}
                             </span>
 
                             <span class="d-block">
@@ -58,41 +78,22 @@
                                 </span>
                             {% endif %}
 
-                            <span class="btninfo w-button" >{{ 'Editar' | translate | a_tag(store.customer_info_url, '', 'btn-link') }}</span>
+                            {{ 'Editar' | translate | a_tag(store.customer_info_url, '', 'btndirecciones w-button') }}
                         </div>
                     </div>
-
-                    {% if customer.default_address %}
-                        <div class="contdetail-account">
-                            <h4 class="titles-micuenta">{{ 'Mis direcciones' | translate }}</h4>
-                        </div>
-                        <div class="cont-infodirecc w-clearfix" >
-                            <div class="infodireccion">
-                                <strong class="d-block">
-                                    {{ 'Principal' | translate }}
-                                </strong>
-                                <span class="d-block">
-                                    {{ customer.default_address | format_address_short }}
-                                </span>
-                                <span class="btndirecciones w-button"> {{ 'Editar' | translate | a_tag(store.customer_addresses_url, '', 'btn-link') }}</span>
-                            </div>
-                        </div>
-                    {% endif %}
 
 
                 </div>
 
-                <div class="w-col w-col-9">
+                <div class="colhistorial w-col w-col-9">
                     <div class="container-list-pedido">
 
-                        <h4 class="titles-micuenta">{{ 'Mis compras' | translate }}</h4>
+                        <h4 class="titles-micuenta">{{ 'Historial de pedidos' | translate }}</h4>
 
                         <div class="row mt-3" data-store="account-orders">
 
                             {% if customer.orders %}
-                                <div class="col-12 d-none d-md-block">
-                                    <hr class="divider mt-0">
-                                </div>
+
                                 {% for order in customer.orders %}
                                     {% set add_checkout_link = order.pending %}
                                     <div class="col-md-6" data-store="account-order-item-{{ order.id }}">
@@ -165,3 +166,9 @@
 
     </div>
 </section>
+
+<style>
+    .btndirecciones{
+        margin-right: 0;
+    }
+</style>
