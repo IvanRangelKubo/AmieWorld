@@ -1,11 +1,13 @@
 
-<section class="seccinternas">
-    <div class="custom-container" data-store="account-order-detail-{{ order.id }}">
+<section class="seccmicuenta">
+    <div class="customcontainer" data-store="account-order-detail-{{ order.id }}">
     	<div class="elementos-cuenta">
 
-            <div class="maintitle-cont">
-                <h2 class="maintitle">ORDEN: <span class="redtxttitle">#{{order.number}}</span></h2>
+            <div class="secctitles internas">
+                <h1 class="maintitle internas">ORDEN: <span class="redtxttitle">#{{order.number}}</span>🌟</h1>
+                <div class="linetitle"></div>
             </div>
+
             <div class="row-pedidos w-row" >
                 <div class="w-col w-col-3">
 
@@ -46,7 +48,7 @@
                 <div class="w-col w-col-9">
                     <div class="container-list-pedido">
                         <h4 class="titles-micuenta">{{ 'Productos' | translate }}</h4>
-                        <hr class="divider my-3 d-none d-md-block">
+                        
                         <div class="order-detail">
                             {% embed "snipplets/card.tpl" %}
                                 {% block card_head %}
@@ -116,3 +118,9 @@
     	</div>
     </div>
 </section>
+
+<style>
+    .card {
+        border: 1px solid var(--lighterpink);
+    }
+</style>

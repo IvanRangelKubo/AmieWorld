@@ -138,9 +138,9 @@
                                             {% endblock %}
                                             {% block card_foot %}
                                                 {% if add_checkout_link %}
-                                                    <a class="btn btn-primary d-block" href="{{ order.checkout_url | add_param('ref', 'orders_list') }}" target="_blank">{{'Realizar pago' | translate}}</a>
+                                                    <a class="btn btn-primary d-block loginpopbtn w-button" href="{{ order.checkout_url | add_param('ref', 'orders_list') }}" target="_blank">{{'Realizar pago' | translate}}</a>
                                                 {% elseif order.order_status_url != null %}
-                                                    <a class="btn btn-primary d-block" href="{{ order.order_status_url | add_param('ref', 'orders_list') }}" target="_blank">{% if 'Correios' in order.shipping_name %}{{'Seguí la entrega' | translate}}{% else %}{{'Seguí tu orden' | translate}}{% endif %}</a>
+                                                    <a class="btn btn-primary d-block loginpopbtn w-button" href="{{ order.order_status_url | add_param('ref', 'orders_list') }}" target="_blank">{% if 'Correios' in order.shipping_name %}{{'Seguí la entrega' | translate}}{% else %}{{'Seguí tu orden' | translate}}{% endif %}</a>
                                                 {% endif %}
                                             {% endblock %}
                                         {% endembed %}
@@ -170,5 +170,15 @@
 <style>
     .btndirecciones{
         margin-right: 0;
+    }
+
+    .card {
+        border: 1px solid var(--lighterpink);
+    }
+
+    .btn.btn-primary.loginpopbtn.w-button {
+        letter-spacing: normal;
+        text-transform: none;
+        margin-top: 0;
     }
 </style>
