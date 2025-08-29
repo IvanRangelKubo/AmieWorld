@@ -39,8 +39,9 @@
                                         {% if result.invalid %}
                                             <div class="alert alert-danger">{{ 'Estos datos no son correctos. ¿Chequeaste que estén bien escritos?' | translate }}</div>
                                         {% endif %}
+                                        
                                     {% endblock %}
-                                    <a href="/account/reset" class="frgtpassword">Olvidé mi contraseña</a>
+                                    
                                 {% endembed %}
                                 
                             </div>
