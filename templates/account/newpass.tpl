@@ -9,8 +9,6 @@
 
                     {% if link_expired %}
 
-                        {% set contact_links = store.whatsapp or store.phone or store.email %}
-
                         <div class="secctitles">
                             <h1 class="maintitle">¡{{ 'El link para activar tu cuenta expiró' | translate }}!</h1>
                             <div class="linetitle"></div>
@@ -77,7 +75,7 @@
         margin-bottom: 0;
     } 
 
-    .btn.btn-primary.loginpopbtn.w-button {
+    .btn.btn-primary.loginpopbtn.w-button, a.btn-link.btn-link-primary.loginpopbtn.w-button {
         letter-spacing: normal;
         text-transform: none;
     }
@@ -107,4 +105,8 @@
         margin: auto;
         width: 90%;
 	}
+
+    a.btn-link.btn-link-primary.loginpopbtn.w-button {
+        text-align: center;
+    }
 </style>
