@@ -88,9 +88,15 @@
 
             {% set state = store.is_catalog ? 'catalog' : (product.available ? product.display_price ? 'cart' : 'contact' : 'nostock') %}
             {% set texts = {'cart': "Agregar a mi bolsa", 'contact': "Consultar precio", 'nostock': "Sin stock", 'catalog': "Consultar"} %}
+            {% set jsClasses = ''%}
+            {% set btnType = 'button' %}
+            {% if state != 'nostock' %}
+                {% set jsClasses = 'js-addtocart js-prod-submit-form' %}
+                {% set btnType = 'submit' %}
+            {% endif %}
 
             <div class="ctavip-cont">
-                <input type="submit" style="margin: 0;" class="btn-vip w-button js-addtocart js-prod-submit-form btn btn-primary btn-block mb-4 {{ state }}" value="{{ texts[state] | translate }}" {% if state == 'nostock' %}disabled{% endif %} data-store="product-buy-button" data-component="product.add-to-cart"/>
+                <input type="{{ btnType }}" style="margin: 0;" class="btn-vip w-button {{ jsClasses }}  btn btn-primary btn-block mb-4 {{ state }}" value="{{ texts[state] | translate }}" {% if state == 'nostock' %} disabled {% endif %} data-store="product-buy-button" data-component="product.add-to-cart"/>
                 {# Fake add to cart CTA visible during add to cart event #}
                 {% include 'snipplets/placeholders/button-placeholder.tpl' with {custom_class: "btn-block mb-4"} %}
                 <div class="js-added-to-cart-product-message float-leftt w-100 mb-3 text-center text-md-left" style="display: none;">
