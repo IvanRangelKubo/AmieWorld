@@ -49,34 +49,28 @@
 
     <div class="logolinkvip">
 
-        {% if product.brand == "Merry monde" %}
-            <img src="{{ "images/amie_world_brand_1.webp" | static_url }}" loading="lazy" class="brandlogovip">
+        {% set brand = product.brand|lower|trim %}
+
+        {% if brand == "merry monde" or brand == "merrymonde" %}
+        <img src="{{ "images/amie_world_brand_1.webp" | static_url }}" loading="lazy" class="brandlogovip">
+        {% elseif brand == "spalife" %}
+        <img src="{{ "images/amie_world_brand_2.webp" | static_url }}" loading="lazy" class="brandlogovip">
+        {% elseif brand == "patchholic" %}
+        <img src="{{ "images/amie_world_brand_3.webp" | static_url }}" loading="lazy" class="brandlogovip">
+        {% elseif brand == "black rouge" or brand == "blackrouge" %}
+        <img src="{{ "images/amie_world_brand_4.webp" | static_url }}" loading="lazy" class="brandlogovip">
+        {% elseif brand == "11 village factory" or brand == "11villagefactory" %}
+        <img src="{{ "images/amie_world_brand_5.webp" | static_url }}" loading="lazy" class="brandlogovip">
+        {% elseif brand == "peach and" or brand == "peachand" %}
+        <img src="{{ "images/amie_world_brand_6.webp" | static_url }}" loading="lazy" class="brandlogovip">
+        {% elseif brand == "look at me" or brand == "lookatme" %}
+        <img src="{{ "images/amie_world_brand_7.webp" | static_url }}" loading="lazy" class="brandlogovip">
+        {% elseif brand == "lala recipe" or brand == "lalarecipe" %}
+        <img src="{{ "images/amie_world_brand_8.webp" | static_url }}" loading="lazy" class="brandlogovip">
+        {% elseif brand == "midha rice lab" or brand == "midharicelab" %}
+        <img src="{{ "images/amie_world_brand_9.webp" | static_url }}" loading="lazy" class="brandlogovip">
         {% endif %}
 
-        {% if product.brand == "Spalife" %}
-            <img src="{{ "images/amie_world_brand_2.webp" | static_url }}" loading="lazy" class="brandlogovip">
-        {% endif %}
-        {% if product.brand == "PatchHolic" %}
-            <img src="{{ "images/amie_world_brand_3.webp" | static_url }}" loading="lazy" class="brandlogovip">
-        {% endif %}
-        {% if product.brand == "Black Rouge" %}
-            <img src="{{ "images/amie_world_brand_4.webp" | static_url }}" loading="lazy" class="brandlogovip">
-        {% endif %}
-        {% if product.brand == "11 Village Factory" %}
-            <img src="{{ "images/amie_world_brand_5.webp" | static_url }}" loading="lazy" class="brandlogovip">
-        {% endif %}
-        {% if product.brand == "Peach and" %}
-            <img src="{{ "images/amie_world_brand_6.webp" | static_url }}" loading="lazy" class="brandlogovip">
-        {% endif %}
-        {% if product.brand == "Look at me" %}
-            <img src="{{ "images/amie_world_brand_7.webp" | static_url }}" loading="lazy" class="brandlogovip">
-        {% endif %}
-        {% if product.brand == "Lala Recipe" %}
-            <img src="{{ "images/amie_world_brand_8.webp" | static_url }}" loading="lazy" class="brandlogovip">
-        {% endif %}
-        {% if product.brand == "Midha Rice Lab" %}
-            <img src="{{ "images/amie_world_brand_9.webp" | static_url }}" loading="lazy" class="brandlogovip">
-        {% endif %}
     </div>
 
     {# Product form, includes: Variants, CTA and Shipping calculator #}
