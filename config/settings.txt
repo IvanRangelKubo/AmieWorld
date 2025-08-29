@@ -718,6 +718,25 @@ Detalle de producto
 		name = bullet_variants
 		description = Mostrar como botones
 	title
+		title = Metodos de pago
+	image
+		original = product_payment_1.jpg
+		title = Cargar imagen (JPG, PNG)
+	image
+		original = product_payment_2.jpg
+		title = Cargar imagen (JPG, PNG)
+	image
+		original = product_payment_3.jpg
+		title = Cargar imagen (JPG, PNG)
+	image
+		original = product_payment_4.jpg
+		title = Cargar imagen (JPG, PNG)
+	title
+		title = Envio gratis
+	i18n_input
+		description = Etiqueta de Envio Gratis
+		name = product_free_shiping
+	title
 		title = Productos relacionados
 	i18n_input
 		description = Título para los productos alternativos

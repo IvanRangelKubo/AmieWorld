@@ -102,16 +102,16 @@
     </div>
 
     <div class="contlogospagos vip">
-        <img loading="lazy" src="{{ "images/visa-10.svg" | static_url }}" alt="" class="mediopago">
-        <img loading="lazy" src="{{ "images/mastercard_logo.svg" | static_url }}" alt="" class="mediopago">
-        <img loading="lazy" src="{{ "images/mercado_pago_logo4.svg" | static_url }}" alt="" class="mediopago">
-        <img loading="lazy" src="{{ "images/paypal_logo.svg" | static_url }}" alt="" class="mediopago">
+        <img loading="lazy" src="{{ "product_payment_1.jpg" | static_url }}" alt="" class="mediopago">
+        <img loading="lazy" src="{{ "product_payment_2.jpg" | static_url }}" alt="" class="mediopago">
+        <img loading="lazy" src="{{ "product_payment_3.jpg" | static_url }}" alt="" class="mediopago">
+        <img loading="lazy" src="{{ "product_payment_4.jpg" | static_url }}" alt="" class="mediopago">
     </div>
 
     <div class="promovip">
         <img loading="lazy" src="{{ "images/icon_garantia-copia.svg" | static_url }}" alt="Envio Gratis" class="iconvip">
         <div class="titulovip-elements">
-            <span class="pinktxtvip">ENVÍOS GRATIS</span> en compras mayores a <strong>$1,499ºº MXN </strong>
+            <span class="pinktxtvip">ENVÍOS GRATIS</span> en compras mayores a <strong>{{ settings.product_free_shiping }} </strong>
         </div>
     </div>
 
