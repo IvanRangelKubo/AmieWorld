@@ -10,7 +10,7 @@
 				<div class="w-layout-cell logcell">
 
 					<div class="secctitles">
-							<h1 class="maintitle">{{ "¡Estás a un paso de crear tu cuenta!" | translate }}</h1>
+							<h1 class="maintitle">{{ "¡Estás a un paso de crear tu cuenta! 🫰" | translate }}</h1>
 							<div class="linetitle"></div>
 					</div>
 
