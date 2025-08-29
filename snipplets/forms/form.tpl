@@ -17,4 +17,7 @@
         <a href="#" class="{{ cancel_custom_class }} btn btn-default">{{ cancel_text }}</a>
     {% endif %}
     <input class="btn btn-primary {{ submit_custom_class }}" type="submit" value="{{ submit_text }}" name="{{ submit_name }}" {{ submit_prop }}/>
+    {% if template == 'login' %}
+        <a href="/account/reset" class="frgtpassword">Olvidé mi contraseña</a>
+    {% endif %}
 </form>

@@ -40,8 +40,9 @@
                                             <div class="alert alert-danger">{{ 'Estos datos no son correctos. ¿Chequeaste que estén bien escritos?' | translate }}</div>
                                         {% endif %}
                                     {% endblock %}
+                                    <a href="/account/reset" class="frgtpassword">Olvidé mi contraseña</a>
                                 {% endembed %}
-                                <a href="/account/reset" class="frgtpassword">Olvidé mi contraseña</a>
+                                
                             </div>
                         </div>
                         
@@ -52,7 +53,7 @@
             </div>
 
             <div class="w-layout-cell imglogincell">
-            <div class="loginimg"></div>
+                <div class="loginimg"></div>
             </div>
             
         </div>
