@@ -153,6 +153,14 @@
             iframe#store_bar_iframe {
                 visibility: hidden;
             }
+
+            a.js-notification-close.js-acknowledge-cookies.btn.btn-primary.btn-medium.px-4.py-2.d-inline-block.loginpopbtn.w-button {
+                margin: 0;
+            }
+
+            .js-notification.js-notification-cookie-banner.notification.notification-fixed-bottom.notification-above.notification-secondary {
+                background: white;
+            }
         </style>
 
         {# Loads custom CSS added from Advanced Settings on the admin´s theme customization screen #}

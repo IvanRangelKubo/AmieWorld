@@ -8,7 +8,7 @@
                     {{ 'Al navegar por este sitio <strong>aceptás el uso de cookies</strong> para agilizar tu experiencia de compra.' | translate }}
                 </div>
                 <div class="col-md-auto">
-                    <a href="#" class="js-notification-close js-acknowledge-cookies btn btn-primary btn-medium px-4 py-2 d-inline-block">{{ "Entendido" | translate }}</a>
+                    <a href="#" class="js-notification-close js-acknowledge-cookies btn btn-primary btn-medium px-4 py-2 d-inline-block loginpopbtn w-button">{{ "Entendido" | translate }}</a>
                 </div>
             </div>
         </div>
