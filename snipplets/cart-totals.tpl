@@ -239,15 +239,6 @@
                   <input type="hidden" id="ajax-cart-minimum-value" value="{{ cart_total }}"/>
                 {% endif %}
 
-                {# Cart panel continue buying link #}
-
-                {% if settings.continue_buying %}
-                  <div class="row mb-2">
-                    <div class="text-center w-100">
-                      <a href="{{ store.products_url }}" class="{% if not  cart_page %}js-modal-close js-fullscreen-modal-close{% endif %} btn btn-link allprodutctsbtn">{{ 'Ver más productos' | translate }}</a>
-                    </div>
-                  </div>
-                {% endif %}
               </div>
         {% if cart_page %}
             </div>
