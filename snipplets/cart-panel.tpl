@@ -1,4 +1,12 @@
-<div class="js-ajax-cart-list cart-row">
+<div class="js-ajax-cart-list cart-row cartItems">
+    <div class="cartTitles">
+      <span class="cartTitle">
+        Producto
+      </span>
+      <span class="cartTitle">
+        Total
+      </span>
+    </div>
     {# Cart panel items #}
     {% if cart.items %}
       {% for item in cart.items %}
@@ -7,7 +15,7 @@
     {% endif %}
 </div>
 
-<div class="js-empty-ajax-cart cart-row" {% if cart.items_count > 0 %}style="display:none;"{% endif %}>
+<div class="js-empty-ajax-cart cart-row cartEmpty" {% if cart.items_count > 0 %}style="display:none;"{% endif %}>
  	{# Cart panel empty #}
     <div class="alert alert-info" data-component="cart.empty-message">{{ "El carrito de compras está vacío." | translate }}</div>
 </div>
@@ -32,3 +40,20 @@
 <div class="cart-row cart-footer">
     {% include "snipplets/cart-totals.tpl" %}
 </div>
+
+<style>
+  .cartTitles {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 5px 10px;
+      border-bottom: 1px solid gainsboro;
+  }
+
+  .cartTitle {
+    font-size: 17px;
+    font-family: Montserrat, sans-serif;
+  }
+
+</style>

@@ -161,6 +161,39 @@
             .js-notification.js-notification-cookie-banner.notification.notification-fixed-bottom.notification-above.notification-secondary {
                 background: white;
             }
+
+            #modal-cart > .js-ajax-cart-panel > .modal-header > span.modal-close {
+                position: absolute;
+                right: 0px;
+                top: 15px;
+            }
+
+            form.js-ajax-cart-panel > .js-modal-close.js-fullscreen-modal-close.modal-header {
+                padding: 13px 15px 10px 25px !important;
+                color: #ff0065;
+                font-weight: 600;
+                font-family: Montserrat, sans-serif;
+            }
+
+            div#modal-cart {
+                height: 100%;
+                overflow: hidden;
+                padding-right: 0;
+            }
+
+            .cartItems {
+                height: 78%;
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
+
+            form.js-ajax-cart-panel {
+                height: 100%;
+            }
+
+            form.js-ajax-cart-panel > .modal-body {
+                height: 100%;
+            }
         </style>
 
         {# Loads custom CSS added from Advanced Settings on the admin´s theme customization screen #}
