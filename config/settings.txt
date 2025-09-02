@@ -1045,6 +1045,11 @@ Carrito de compras
 	checkbox
 		name = ajax_cart
 		description = Permitir que tus clientes agreguen productos al carrito sin necesidad de ir a otra página
+	title
+		title = Recomendaciones de productos
+	checkbox
+		name = add_to_cart_recommendations
+		description = Sugerir productos complementarios al agregar uno al carrito de compras rápidas
 
 Blog
 	meta

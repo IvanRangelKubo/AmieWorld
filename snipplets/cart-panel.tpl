@@ -93,5 +93,15 @@
 
   span.js-cart-quantity-btn.cart-item-btn.btn {
     font-size: 12px !important;
+  }
+
+  .js-empty-ajax-cart.cart-row.cartEmpty {
+    margin-right: 10px;
+  }
+
+  span.js-cart-input-spinner.cart-item-spinner {
+      position: absolute;
+      top: 20%;
+  }
 
 </style>
