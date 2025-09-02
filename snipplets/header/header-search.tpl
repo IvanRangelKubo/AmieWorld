@@ -21,4 +21,8 @@
     .busqueda-formcot{
         padding-top: 8px;
     }
+
+    .js-search-suggest.search-suggest.contsearchpredictive {
+        display: none;
+    }
 </style>
