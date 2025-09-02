@@ -3,7 +3,17 @@
   {# Cart item image #}
   <div class="cart-tem-image">
     <a href="{{ item.url }}">
-      <img src="{{ item.featured_image | product_image_url('medium') }}" class="img-fluid" />
+                        {# armamos la URL "real" de la imagen destacada #}
+      {% set featured_url = item.featured_image | product_image_url('original') %}
+      {# en TN, cuando no hay imagen, la URL incluye "no-photo" #}
+      {% set has_real_image = featured_url and ('no-photo' not in featured_url) %}
+
+      {% if has_real_image %}
+        <img src="{{ item.featured_image | product_image_url('medium') }}" class="img-fluid" />
+      {% else %}
+        <img src="{{ 'images/placeholder_amieworld.webp' | static_url }}" class="img-fluid" />
+      {% endif %}
+      
     </a>
   </div>
 
