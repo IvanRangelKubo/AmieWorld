@@ -217,7 +217,7 @@
 
                 {% if cart_page %}
                   {% if cart.checkout_enabled %}
-                    <input id="go-to-checkout" class="btn btn-primary btn-block mb-3 cart-btn" type="submit" name="go_to_checkout" value="{{ 'Iniciar Compra' | translate }}" data-component="cart.checkout-button"/>
+                    <input id="go-to-checkout" class="btn btn-primary btn-block mb-3 cart-btn" type="submit" name="go_to_checkout" value="{{ 'Pagar Pedido' | translate }}" data-component="cart.checkout-button"/>
                   {% else %}
 
                     {# Cart minium alert #}
@@ -228,7 +228,7 @@
                   {% endif %}
                 {% else %}
                   <div class="js-ajax-cart-submit row mb-3" {{ not cart.checkout_enabled ? 'style="display:none"' }} id="ajax-cart-submit-div">
-                    <input class="btn btn-primary btn-block cart-btn" type="submit" name="go_to_checkout" value="{{ 'Iniciar Compra' | translate }}" data-component="cart.checkout-button"/>
+                    <input class="btn btn-primary btn-block cart-btn" type="submit" name="go_to_checkout" value="{{ 'Pagar Pedido' | translate }}" data-component="cart.checkout-button"/>
                   </div>
 
                   {# Cart minium alert #}
@@ -248,3 +248,38 @@
     </div>
   </div>
 {% endif %}
+
+<style>
+  .cart-row.cart-footer {
+    margin-right: 10px;
+    padding-top: 15px;
+    border-top: 1px solid gainsboro;
+  }
+
+  input.btn.btn-primary.btn-block.cart-btn {
+      letter-spacing: normal;
+      text-transform: none;
+      font-size: 16px;
+      background-color: var(--regularpink);
+      font-family: Montserrat, sans-serif;
+      font-weight: 600;
+  }
+
+  h2.row.no-gutters.text-primary.mb-0 {
+      font-size: 20px;
+      font-family: Montserrat, sans-serif;
+      margin: 0;
+      font-weight: 500;
+  }
+
+  h5.js-visible-on-cart-filled.row.no-gutters.mb-1 {
+      font-size: 15px;
+      font-family: Montserrat, sans-serif;
+      color: #454545;
+      font-weight: 500;
+  }
+
+  strong.js-ajax-cart-total.js-cart-subtotal.col.text-right {
+      font-weight: 500;
+  }
+</style>
