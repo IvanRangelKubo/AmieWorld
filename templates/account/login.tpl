@@ -76,4 +76,13 @@
         top: 9px !important;
         right: 36px !important;
     }
+
+    .alert.alert-danger {
+        border: 2px solid var(--darkgrey);
+        box-shadow: 6px 6px 0 0 var(--darkgrey);
+        margin: auto;
+        margin-bottom: 15px;
+        width: 90%;
+        color: crimson;
+    }
 </style>

@@ -73,7 +73,7 @@
 									{% endif %}
 
 									{% if settings.facebook_url %}
-										<a href="{{ settings.facebook_url }}" class="footerlink w-inline-block">
+										<a href="{{ settings.facebook_url }}" target="_blank" class="footerlink w-inline-block">
 											<img src="{{ "images/icon_facebook.svg" | static_url }}" alt="Facebook" class="footericon">
 										</a>
 									{% endif %}
