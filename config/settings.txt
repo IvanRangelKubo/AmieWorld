@@ -545,6 +545,11 @@ Página de inicio
 	i18n_input
 		name = blog_section_link_4
 		description = Link al blog
+	title
+		title = Seccion Instagram
+	checkbox
+		name = show_insta
+		description = Mostrar Seccion
 	collapse
 		title = Publicaciones de Instagram
 		backto = home_order_position
