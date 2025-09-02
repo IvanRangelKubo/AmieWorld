@@ -28,10 +28,6 @@
     {# Product name and breadcrumbs #}
     <h1 class="titleproductvip">{{ product.name }}</h1>
 
-    <div class="starreviews">
-        <img src="{{ "images/starsreviews.png" | static_url }}" loading="lazy" alt="">
-    </div>
-
 
     {# Product price #}
 

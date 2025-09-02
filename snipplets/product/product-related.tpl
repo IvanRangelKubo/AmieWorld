@@ -72,7 +72,7 @@
                 </div>
 
                 <div class="container-titleandprices">
-                    <div class="contstarsreviews"></div>
+                    
                     <div>{{related_product.featured_image.name}}</div>
                     <a href="{{related_product.canonical_url}}" class="nombre-producto">{{related_product.name}}</a>
                     <div class="precios-container">
