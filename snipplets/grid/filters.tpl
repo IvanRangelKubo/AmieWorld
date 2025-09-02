@@ -3,8 +3,8 @@
     {# Applied filters chips #}
 
     {% if has_applied_filters %}
-        <div class="col-12 mb-3">
-            <div class="d-md-inline-block mr-md-2 mb-3">{{ 'Filtrado por:' | translate }}</div>
+        <div class="col-12 mb-3 containerFiltersApplied">
+            <div class="d-md-inline-block mr-md-2 mb-3 sortLabel">{{ 'Filtrado por:' | translate }}</div>
             {% for product_filter in product_filters %}
                 {% for value in product_filter.values %}
 
@@ -21,6 +21,7 @@
             <a href="#" class="js-remove-all-filters d-inline-block px-0">{{ 'Borrar filtros' | translate }}</a> 
         </div>
     {% endif %}
+
 {% else %}
     {% if product_filters is not empty %}
         <div id="filters" data-store="filters-nav">
@@ -73,3 +74,17 @@
         </div>
     {% endif %}
 {% endif %}
+
+<style>
+    .col-12.mb-3.containerFiltersApplied {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    button.js-remove-filter.chip {
+        background: white;
+        border: 2px solid black;
+    }
+</style>

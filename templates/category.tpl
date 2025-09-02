@@ -54,7 +54,7 @@
 			</div>
 
 			<!-- Filters -->
-			<div class="row">
+			<div class="row ApliedFilters">
 				{% include "snipplets/grid/filters.tpl" with {applied_filters: true} %}
 			</div>
 			<!-- Filters -->
@@ -130,6 +130,10 @@
 			font-size: medium;
 			padding: 5px 15px;
 			border: 2px solid black;
+		}
+
+		.ApliedFilters {
+			margin: auto !important;
 		}
 	</style>
 {% elseif show_help %}
