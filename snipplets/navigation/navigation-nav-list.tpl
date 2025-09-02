@@ -19,7 +19,12 @@
       </div>
 
     {% else %}
-      <a href="{{ item.url }}" class="menuelement w-nav-link">{{ item.name }}</a>
+      {% if item.name == "%OFERTAS" %}
+        <a href="{{ item.url }}" class="menuelement ofertas w-nav-link">{{ item.name }}</a>
+      {% else %}
+        <a href="{{ item.url }}" class="menuelement w-nav-link">{{ item.name }}</a>
+      {% endif %}
+      
     {% endif %}
 
   {% endfor %}
