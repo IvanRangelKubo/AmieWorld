@@ -1069,12 +1069,12 @@ Blog
 		advanced = true
 	title
 		title = Banner
-	image
-		original = banner_blog.jpg
-		title = Cargar imagen (JPG, PNG)
 	i18n_input
 		name = blog_title
 		description = Nombre del blog
+	textarea
+		name = blog_page_description
+		description = "Descripción"
 
 Pie de página
 	meta

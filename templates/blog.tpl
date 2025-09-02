@@ -7,41 +7,35 @@
             <div class="linetitle"></div>
         </div>
 
-        <p class="introblog">Bienvenid@ a nuestro blog, el rincón donde la pasión por el skincare coreano y el cuidado personal se encuentran. Aquí encontrarás tips, consejos, lanzamientos y todo lo que necesitas para consentir tu piel y sentirte increíble. Porque en Amie, creemos que cuidar de ti es la mejor forma de brillar. </p>
-        <a data-w-id="b2967ce7-bd11-ea86-daf0-02a59c529577" href="#" class="vertagsbtn w-button">Ver Categorías</a>
-
-        <div class="cont-tagsblog">
-            <a href="#" class="tagblog">Ver todo</a>
-            <a href="#" class="tagblog selected">Ingredientes</a>
-            <a href="#" class="tagblog">Formulaciones</a>
-            <a href="#" class="tagblog">Tendencias</a>
-            <a href="#" class="tagblog">Webinar / Masterclass</a>
-            <a href="#" class="tagblog">Estilo de vida</a>
-            <a href="#" class="tagblog">Tips skincare</a>
-        </div>
+        <p class="introblog">{{ settings.blog_page_description }}</p>
 
         <div class="listingposts">
-            
             {% for post in blog.posts %}
                 <div class="entrycont listing">
-                    {{ component(
-                        'blog/blog-post-item', {
-                            image_lazy: true,
-                            image_lazy_js: true,
-                            post_item_classes: {
-                                item: 'w-layout-layout stackentry listing wf-layout-layout',
-                                image_container: 'w-layout-cell',
-                                image: '',
-                                title: 'titleentry',
-                                summary: 'excerptblog',
-                                read_more: 'readmoreblog',
-                            },
-                        })
-                    }}
+                    <div id="w-node-_14696461-c14d-e87d-c4f5-40bfd98d348b-08e4e0d2" class="w-layout-layout stackentry listing wf-layout-layout">
+
+    
+                        <div class="w-layout-cell imgcellentry">
+                            <div class="imgentrydiv" style="background-image: url('{{ post.thumbnail | default('images/placeholder_amieworld.webp') }}');"></div>
+                        </div>
+
+                        <div class="w-layout-cell">
+                            <div class="infominblog">
+                                <div class="dateentryblog">{{ post.date | date("d/m/Y") }}</div>
+                                <h5 class="titleentry">{{ post.title }}</h5>
+                                <p class="excerptblog">
+                                    {{ post.summary}}
+                                </p>
+                                <a href="{{ shop.url }}/blog/posts/{{ post.handle }}" class="readmoreblog">Leer más</a>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
+
             {% endfor %}
-            
         </div>
+
 
     </div>
 </div>
@@ -59,6 +53,15 @@
 
     .post-item-image-container.w-layout-cell.imgcellentry,.post-item-image-container.w-layout-cell {
         width: 50% !important;
+    }
+
+    .titleentry {
+        min-height: auto !important;
+        height: auto !important;
+    }
+
+    .excerptblog {
+        height: 150px;
     }
 
 </style>
