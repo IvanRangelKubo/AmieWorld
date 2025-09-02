@@ -66,9 +66,22 @@
                             <div class="imgfront {% if related_product.images_count > 1 %}hoverOn{% endif %}" style="background-image:url({{ 'images/placeholder_amieworld.webp' | static_url }})"></div>
                     {% endif %}
                     </a>
-                    <a href="{{related_product.canonical_url}}" class="adtobag">
-                    <img  src="{{ "images/addtobagicon.svg" | static_url }}" alt="" class="iconquickshop">
-                    </a>
+
+                    {% if product.available and not product.variations %}
+                    <form class="js-product-form" method="post" action="{{ store.cart_url }}">
+                        <input type="hidden" name="add_to_cart" value="{{ product.id }}" />
+                        <input type="hidden" name="quantity" value="1" />
+
+                        <button type="submit"
+                                class="adtobag js-addtocart js-prod-submit-form"
+                                data-store="product-buy-button">
+                        <img src="{{ "images/addtobagicon.svg" | static_url }}" 
+                            alt="Agregar" 
+                            class="iconquickshop">
+                        </button>
+                    </form>
+                    {% endif %}
+
                 </div>
 
                 <div class="container-titleandprices">

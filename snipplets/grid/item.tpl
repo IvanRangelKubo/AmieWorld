@@ -54,9 +54,20 @@
                         style="background-image:url({{ 'images/placeholder_amieworld.webp' | static_url }})"></div>
                   {% endif %}
                 </a>
-                <div class="adtobag">
-                    <img loading="lazy" src="{{ "images/addtobagicon.svg" | static_url }}" class="iconquickshop">
-                </div>
+                {% if product.available and not product.variations %}
+                  <form class="js-product-form" method="post" action="{{ store.cart_url }}">
+                    <input type="hidden" name="add_to_cart" value="{{ product.id }}" />
+                    <input type="hidden" name="quantity" value="1" />
+
+                    <button type="submit"
+                            class="adtobag js-addtocart js-prod-submit-form"
+                            data-store="product-buy-button">
+                      <img src="{{ "images/addtobagicon.svg" | static_url }}" 
+                          alt="Agregar" 
+                          class="iconquickshop">
+                    </button>
+                  </form>
+                {% endif %}
             </div>
             
         </div>
