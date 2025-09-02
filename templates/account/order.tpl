@@ -8,6 +8,10 @@
                 <div class="linetitle"></div>
             </div>
 
+            <div class="contbtncuenta">
+                <a href="/account" class="btnmicuenta w-button">Regresar</a>
+            </div>
+
             <div class="row-pedidos w-row" >
                 <div class="w-col w-col-3">
 
@@ -45,75 +49,80 @@
 
                 </div>
 
-                <div class="w-col w-col-9">
+                <div class="colhistorial w-col w-col-9">
                     <div class="container-list-pedido">
                         <h4 class="titles-micuenta">{{ 'Productos' | translate }}</h4>
-                        
-                        <div class="order-detail">
-                            {% embed "snipplets/card.tpl" %}
-                                {% block card_head %}
-                                    <div class="d-none d-md-block">
-                                        <div class="row">
-                                            <div class="col-md-7">
-                                                {{ 'Producto' | translate }}
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="row">
-                                                    <div class="col-4 text-center">
-                                                        {{ 'Precio' | translate }}
-                                                    </div>
-                                                    <div class="col-4 text-center">
-                                                        {{ 'Cantidad' | translate }}
-                                                    </div>
-                                                    <div class="col-4 text-center">
-                                                        {{ 'Total' | translate }}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                {% endblock %}
-                                {% block card_body %}
-                                    {% for item in order.items %}
-                                        <div class="row align-items-center{% if not loop.last %} pb-3{% endif %}">
-                                            <div class="col-5 col-md-2">
-                                                <div class="card-img-square-container">
-                                                    {{ item.featured_image | product_image_url("small") | img_tag(item.featured_image.alt, {class: 'card-img-square'}) }}
-                                                </div>
-                                            </div>
-                                            <div class="col-7 col-md-10">
-                                                <div class="row align-items-center">
-                                                    <div class="col-12 col-md-6">
-                                                        <p>
-                                                            <strong>{{ item.name }}</strong> <span class="d-inline-block d-md-none">x{{ item.quantity }}</span>
-                                                        </p>
-                                                    </div>
-                                                    <div class="col-md-2 d-none d-md-block text-md-center">
-                                                        <p>
-                                                            {{ item.unit_price | money }}
-                                                        </p>
-                                                    </div>
-                                                    <div class="col-md-2 d-none d-md-block text-md-center">
-                                                        <p>
-                                                            {{ item.quantity }}
-                                                        </p>
-                                                    </div>
-                                                    <div class="col-12 col-md-2 text-md-center">
-                                                        <p>
-                                                            {{ item.subtotal | money }}
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                                    
-                                        </div>
-                                    {% endfor %}
-                                {% endblock %}
-                            {% endembed %}
+
+                        <div class="rowtitlepedidos w-row">
+                            <div class="w-col w-col-2 w-col-small-2">
+                                <div class="titlecol-pedido">{{ 'Producto' | translate }}</div>
+                            </div>
+                            <div class="w-col w-col-10 w-col-small-10">
+                                <div class="w-row">
+                                <div class="w-col w-col-4 w-col-small-4">
+                                    <div class="titlecol-pedido">{{ 'Precio' | translate }}</div>
+                                </div>
+                                <div class="w-col w-col-4 w-col-small-4">
+                                    <div class="titlecol-pedido">{{ 'Cantidad' | translate }}</div>
+                                </div>
+                                <div class="w-col w-col-4 w-col-small-4">
+                                    <div class="titlecol-pedido">{{ 'Total' | translate }}</div>
+                                </div>
+                                </div>
+                            </div>
                         </div>
+
+                        {% for item in order.items %}
+                        <div class="rowpedido w-row">
+                            <div class="w-col w-col-2 w-col-small-2">
+                            <a href="{{ item.url }}" class="pedidonumero">
+                                <strong>{{ item.name }}</strong>
+                            </a>
+                            </div>
+                            <div class="w-col w-col-10 w-col-small-10">
+                            <div class="infopedido-datos w-row">
+                                <div class="w-col w-col-4">
+                                <div class="infopedido-list">{{ item.unit_price | money }}</div>
+                                </div>
+                                <div class="w-col w-col-4">
+                                <div class="infopedido-list">{{ item.quantity }}</div>
+                                </div>
+                                <div class="w-col w-col-4">
+                                <div class="infopedido-list">{{ item.subtotal | money }}</div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        {% else %}
+                        <div class="rowpedido w-row">
+                            <div class="w-col w-col-12 text-center">
+                            <p>{{ 'No hay productos en este pedido' | translate }}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+
                     </div>
                 </div>
+
+
             </div>
+
+                                            {# Botones de acción #}
+            {% if order.pending %}
+            <a class="btn btn-primary d-block loginpopbtn w-button mt-2" 
+                href="{{ order.checkout_url | add_param('ref', 'orders_list') }}" target="_blank">
+                {{ 'Realizar pago' | translate }}
+            </a>
+            {% elseif order.order_status_url %}
+            <a class="btn btn-primary d-block loginpopbtn w-button mt-2" 
+                href="{{ order.order_status_url | add_param('ref', 'orders_list') }}" target="_blank">
+                {% if 'Correios' in order.shipping_name %}
+                {{ 'Seguí la entrega' | translate }}
+                {% else %}
+                {{ 'Seguí tu orden' | translate }}
+                {% endif %}
+            </a>
+            {% endif %}
 
     	</div>
     </div>
@@ -122,5 +131,11 @@
 <style>
     .card {
         border: 1px solid var(--lighterpink);
+    }
+
+    a.btn.btn-primary.d-block.loginpopbtn.w-button.mt-2 {
+        letter-spacing: normal;
+        text-transform: none;
+        width: fit-content;
     }
 </style>
