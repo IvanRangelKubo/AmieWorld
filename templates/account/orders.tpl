@@ -87,78 +87,79 @@
 
                 <div class="colhistorial w-col w-col-9">
                     <div class="container-list-pedido">
-
                         <h4 class="titles-micuenta">{{ 'Historial de pedidos' | translate }}</h4>
 
-                        <div class="row mt-3" data-store="account-orders">
-
-                            {% if customer.orders %}
-
-                                {% for order in customer.orders %}
-                                    {% set add_checkout_link = order.pending %}
-                                    <div class="col-md-6" data-store="account-order-item-{{ order.id }}">
-                                        {% embed "snipplets/card.tpl" with{card_footer: true} %}
-                                            {% block card_head %}
-                                                <div class="row">
-                                                    <div class="col text-left">
-                                                        <a class="btn-link" href="{{ store.customer_order_url(order) }}">{{'Orden' | translate}} #{{order.number}}</a>
-                                                    </div>
-                                                    <div class="col text-right">
-                                                        <p class="m-0">{{ order.date | i18n_date('%d/%m/%Y') }}</p>
-                                                    </div>
-                                                </div>
-                                            {% endblock %}
-                                            {% block card_body %}
-                                                <div class="row">
-                                                    <div class="col-5">
-                                                        <div class="card-img-square-container">
-                                                            {% for item in order.items %}
-                                                                {% if loop.first %} 
-                                                                    {% if loop.length > 1 %} 
-                                                                        <span class="card-img-pill label mb-0">{{ loop.length }} {{'Productos' | translate }}</span>
-                                                                    {% endif %}
-                                                                    {{ item.featured_image | product_image_url("") | img_tag(item.featured_image.alt, {class: 'card-img-square'}) }}
-                                                                {% endif %}
-                                                            {% endfor %}
-                                                        </div>
-                                                    </div>
-                                                    <div class="col text-left pl-2">
-                                                        <p class="mb-2">
-                                                            {{'Pago' | translate}}: <strong class="{{ order.payment_status }}">{{ (order.payment_status == 'pending'? 'Pendiente' : (order.payment_status == 'authorized'? 'Autorizado' : (order.payment_status == 'paid'? 'Pagado' : (order.payment_status == 'voided'? 'Cancelado' : (order.payment_status == 'refunded'? 'Reintegrado' : 'Abandonado'))))) | translate }}</strong>
-                                                        </p>
-                                                        <p class="mb-2">
-                                                            {{'Envío' | translate}}: <strong>{{ (order.shipping_status == 'fulfilled'? 'Enviado' : 'No enviado') | translate }}</strong>
-                                                        </p>
-                                                        <p class="mb-2">
-                                                            {{'Total' | translate}}: <strong>{{ order.total | money }}</strong>
-                                                        </p>
-                                                        <a class="btn-link" href="{{ store.customer_order_url(order) }}">{{'Ver detalle' | translate}}</a>
-                                                    </div>
-                                                </div>
-                                            {% endblock %}
-                                            {% block card_foot %}
-                                                {% if add_checkout_link %}
-                                                    <a class="btn btn-primary d-block loginpopbtn w-button" href="{{ order.checkout_url | add_param('ref', 'orders_list') }}" target="_blank">{{'Realizar pago' | translate}}</a>
-                                                {% elseif order.order_status_url != null %}
-                                                    <a class="btn btn-primary d-block loginpopbtn w-button" href="{{ order.order_status_url | add_param('ref', 'orders_list') }}" target="_blank">{% if 'Correios' in order.shipping_name %}{{'Seguí la entrega' | translate}}{% else %}{{'Seguí tu orden' | translate}}{% endif %}</a>
-                                                {% endif %}
-                                            {% endblock %}
-                                        {% endembed %}
-                                    </div>
-                                {% endfor %}
-                            {% else %}
-                                <div class="col text-center">
-                                    <hr class="divider mt-0">
-                                    {% include "snipplets/svg/shopping-bag.tpl" with {svg_custom_class: "icon-inline icon-lg svg-icon-text"} %}
-                                    <p class="mt-2">{{ '¡Hacé tu primera compra!' | translate }}</p>
-                                    {{ 'Ir a la tienda' | translate | a_tag(store.url, '', 'btn-link') }}
-                                </div>
-                            {% endif %}
+                        <div class="rowtitlepedidos w-row">
+                        <div class="w-col w-col-2 w-col-small-2">
+                            <div class="titlecol-pedido">Pedido</div>
                         </div>
-                        
-                    </div>
+                        <div class="w-col w-col-10 w-col-small-10">
+                            <div class="w-row">
+                            <div class="w-col w-col-3 w-col-small-3">
+                                <div class="titlecol-pedido">Fecha</div>
+                            </div>
+                            <div class="w-col w-col-3 w-col-small-3">
+                                <div class="titlecol-pedido">Estatus del pedido</div>
+                            </div>
+                            <div class="w-col w-col-3 w-col-small-3">
+                                <div class="titlecol-pedido">Estatus del pago</div>
+                            </div>
+                            <div class="w-col w-col-3 w-col-small-3">
+                                <div class="titlecol-pedido">Total</div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
 
+                        {% if customer.orders %}
+                        {% for order in customer.orders %}
+                            <div class="rowpedido w-row" data-store="account-order-item-{{ order.id }}">
+                            <div class="w-col w-col-2 w-col-small-2">
+                                <a href="{{ store.customer_order_url(order) }}" class="pedidonumero">#{{ order.number }}</a>
+                            </div>
+                            <div class="w-col w-col-10 w-col-small-10">
+                                <div class="infopedido-datos w-row">
+                                <div class="w-col w-col-3">
+                                    <div class="infopedido-list">{{ order.date | i18n_date('%d/%m/%Y') }}</div>
+                                </div>
+                                <div class="w-col w-col-3">
+                                    <div class="infopedido-list">
+                                    {{ (order.shipping_status == 'fulfilled' ? 'Entregado' : 'No enviado') | translate }}
+                                    </div>
+                                </div>
+                                <div class="w-col w-col-3">
+                                    <div class="infopedido-list">
+                                    {{ (order.payment_status == 'pending'? 'Pendiente' : 
+                                        (order.payment_status == 'authorized'? 'Autorizado' : 
+                                        (order.payment_status == 'paid'? 'Pagado' : 
+                                        (order.payment_status == 'voided'? 'Cancelado' : 
+                                        (order.payment_status == 'refunded'? 'Reintegrado' : 'Abandonado'))))) | translate }}
+                                    </div>
+                                </div>
+                                <div class="w-col w-col-3">
+                                    <div class="infopedido-list">{{ order.total | money }}</div>
+                                </div>
+                                </div>
+
+
+
+                            </div>
+                            </div>
+                        {% endfor %}
+                        {% else %}
+                        <div class="rowpedido w-row">
+                            <div class="w-col w-col-12 text-center">
+                            <hr class="divider mt-0">
+                            {% include "snipplets/svg/shopping-bag.tpl" with {svg_custom_class: "icon-inline icon-lg svg-icon-text"} %}
+                            <p class="mt-2">{{ '¡Hacé tu primera compra!' | translate }}</p>
+                            {{ 'Ir a la tienda' | translate | a_tag(store.url, '', 'btn-link') }}
+                            </div>
+                        </div>
+                        {% endif %}
+
+                    </div>
                 </div>
+
 
             </div>
 
