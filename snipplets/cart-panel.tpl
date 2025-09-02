@@ -49,6 +49,7 @@
       align-items: center;
       padding: 0px 5px 10px;
       border-bottom: 1px solid gainsboro;
+      margin-bottom: 20px;
   }
 
   .cartTitle {
