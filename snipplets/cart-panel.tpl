@@ -56,4 +56,42 @@
     font-family: Montserrat, sans-serif;
   }
 
+    .js-cart-item.cart-item.js-cart-item-shippable.form-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+  }
+
+  .cart-tem-image {
+      width: 25%;
+  }
+
+  .cart-item-info {
+    width: 70%;
+    margin-left: 20px;
+  }
+
+  .form-group.float-left.form-quantity.w-auto.mb-2 {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .cart-item-delete {
+    position: relative !important;
+  }
+
+  .row.m-0.justify-content-md-center {
+    border: 1px solid black;
+  }
+
+  input.form-control.js-cart-quantity-input.cart-item-input.form-control.form-control-inline {
+      font-family: Montserrat, sans-serif;
+      height: 32px;
+      border: none;
+  }
+
+  span.js-cart-quantity-btn.cart-item-btn.btn {
+    font-size: 12px !important;
+
 </style>

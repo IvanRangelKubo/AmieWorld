@@ -183,9 +183,12 @@
 
             .cartItems {
                 height: 78%;
-                overflow-y: scroll;
+                overflow-y: auto; 
                 overflow-x: hidden;
+                scrollbar-gutter: stable both-edges;
+                padding-right: 10px;
             }
+
 
             form.js-ajax-cart-panel {
                 height: 100%;
