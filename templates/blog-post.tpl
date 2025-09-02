@@ -37,6 +37,60 @@
             <div class="sharetxt">Compartir</div>
         </div>
 
+        {% if settings.show_recomended_article_1 or settings.show_recomended_article_2 %}
+            <div class="entradasrecientes">
+                <div class="secctitles">
+                    <h1 class="maintitle">Entradas anteriores 📝</h1>
+                    <div class="linetitle"></div>
+                </div>
+
+                <div id="w-node-ad575169-ae50-49c9-8790-4589e5930468-111b078a" class="w-layout-layout stackrecientes wf-layout-layout">
+
+                    {% if settings.show_recomended_article_1 %}
+                        <div class="w-layout-cell">
+                            <div class="entrycont">
+                            <div id="w-node-ff5c399b-6cb2-e5b4-155d-d550139f18f1-111b078a" class="w-layout-layout stackentry wf-layout-layout">
+                                <div class="w-layout-cell imgcellentry">
+                                    <div class="imgentrydiv" style="background-image: url('{{ "recomended_article_1.jpg" | static_url }}')"></div>
+                                </div>
+                                <div class="w-layout-cell">
+                                <div class="infominblog">
+                                    <div class="dateentryblog">{{ settings.blog_recomended_date_1 }}</div>
+                                    <h5 class="titleentry">{{ settings.blog_recomended_title_1 }}</h5>
+                                    <p class="excerptblog">{{ settings.blog_recomended_article_1 | raw }}</p>
+                                    <a href="{{ settings.blog_recomended_link_1 }}" class="readmoreblog">Leer más</a>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    {% endif %}
+
+                    {% if settings.show_recomended_article_2 %}
+
+                        <div class="w-layout-cell">
+                            <div class="entrycont">
+                            <div id="w-node-c02e2046-0a01-c186-99db-a9e5cc47cb06-111b078a" class="w-layout-layout stackentry wf-layout-layout">
+                                <div class="w-layout-cell imgcellentry">
+                                <div class="imgentrydiv" style="background-image: url('{{ "recomended_article_2.jpg" | static_url }}')"></div>
+                                </div>
+                                <div class="w-layout-cell">
+                                <div class="infominblog">
+                                    <div class="dateentryblog">{{ settings.blog_recomended_date_2 }}</div>
+                                    <h5 class="titleentry">{{ settings.blog_recomended_title_2 }}</h5>
+                                    <p class="excerptblog">{{ settings.blog_recomended_article_2 | raw }}</p>
+                                    <a href="{{ settings.blog_recomended_link_2 }}" class="readmoreblog">Leer más</a>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    {% endif %}
+
+                </div>
+            </div>
+        {% endif %}
+
     </div>
 </div>
 
@@ -81,4 +135,9 @@
         });
     }
     });
+</script>
+
+<script>
+    console.log("Blog posts:");
+    console.log({{ post | json_encode | raw }});
 </script>

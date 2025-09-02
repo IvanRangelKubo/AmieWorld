@@ -1075,6 +1075,49 @@ Blog
 	textarea
 		name = blog_page_description
 		description = "Descripción"
+	title
+		title = Blogs recomendados
+	subtitle
+		subtitle = Articulo 1
+	checkbox
+		name = show_recomended_article_1
+		description = Mostrar Articulo
+	image
+		original = recomended_article_1.jpg
+    	title = Cargar imagen (JPG, PNG)
+    	width = 600
+	i18n_input
+		name = blog_recomended_date_1
+		description = Fecha
+	i18n_input
+		name = blog_recomended_title_1
+		description = Titulo y Resumen
+	textarea
+		name = blog_recomended_article_1
+	i18n_input
+		name = blog_recomended_link_1
+		description = Link al blog
+	subtitle
+		subtitle = Articulo 2
+	checkbox
+		name = show_recomended_article_2
+		description = Mostrar Articulo
+	image
+		original = recomended_article_2.jpg
+    	title = Cargar imagen (JPG, PNG)
+    	width = 600
+	i18n_input
+		name = blog_recomended_date_2
+		description = Fecha
+	i18n_input
+		name = blog_recomended_title_2
+		description = Titulo y Resumen
+	textarea
+		name = blog_recomended_article_2
+	i18n_input
+		name = blog_recomended_link_2
+		description = Link al blog
+	
 
 Pie de página
 	meta
