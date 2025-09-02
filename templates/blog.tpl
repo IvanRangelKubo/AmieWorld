@@ -11,6 +11,7 @@
 
         <div class="listingposts">
             {% for post in blog.posts %}
+            
                 <div class="entrycont listing">
                     <div id="w-node-_14696461-c14d-e87d-c4f5-40bfd98d348b-08e4e0d2" class="w-layout-layout stackentry listing wf-layout-layout">
 
