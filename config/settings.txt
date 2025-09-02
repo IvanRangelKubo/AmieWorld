@@ -551,10 +551,22 @@ Página de inicio
 		name = show_insta
 		description = Mostrar Seccion
 	collapse
-		title = Publicaciones de Instagram
+		title = Carrusel de productos
 		backto = home_order_position
+	description
+		description = Podés destacar los productos que quieras en la página de inicio.
 	subtitle
-		subtitle = No hay configuracion para esta seccion.
+		subtitle = Titulo de productos destacados
+	textarea
+		name = home_carrousel_products_title
+	dropdown
+		name = home_carrousel_products
+		description = Listas de productos
+		values
+			primary = Productos destacados
+			secundary = Todos los productos
+	subtitle
+		subtitle = <a target='_blank' href='/admin/themes/settings/product_order/'>Elegí cuáles vas a destacar</a>
 	collapse
 		title = Reseñas
 		backto = home_order_position
@@ -681,9 +693,9 @@ Página de inicio
 			products = Productos destacados
 			informatives = Garantias
 			categories = Banners de productos
-			modules = Blog
+			modules = Blog y Instagram
 			video = Reseñas
-			instafeed = Publicaciones de Instagram
+			instafeed = Carrusel de productos
 	link
 		text = Pop-up promocional
 		linkto = home_promotional_popup
@@ -707,11 +719,6 @@ Listado de productos
 			16 = 16
 			20 = 20
 			24 = 24
-	title
-		title = Título para Productos destacados
-	i18n_input
-		description = Título
-		name = featured_products_title
 
 Detalle de producto
 	meta
