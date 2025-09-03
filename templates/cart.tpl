@@ -121,5 +121,11 @@
         top: 20%;
     }
 
+    @media screen and (max-width: 479px) {
+        .row.align-items-center {
+            flex-wrap: wrap;
+        }
+    }
+
 
 </style>
