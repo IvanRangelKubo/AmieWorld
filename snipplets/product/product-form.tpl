@@ -104,10 +104,10 @@
     </div>
 
     <div class="contlogospagos vip">
-        <img loading="lazy" src="{{ "product_payment_1.jpg" | static_url }}" alt="" class="mediopago">
-        <img loading="lazy" src="{{ "product_payment_2.jpg" | static_url }}" alt="" class="mediopago">
-        <img loading="lazy" src="{{ "product_payment_3.jpg" | static_url }}" alt="" class="mediopago">
-        <img loading="lazy" src="{{ "product_payment_4.jpg" | static_url }}" alt="" class="mediopago">
+        <img loading="lazy" src="{{ "product_payment_1.jpg" | static_url }}" alt="{{ settings.product_payment_1_alt }}" class="mediopago">
+        <img loading="lazy" src="{{ "product_payment_2.jpg" | static_url }}" alt="{{ settings.product_payment_2_alt }}" class="mediopago">
+        <img loading="lazy" src="{{ "product_payment_3.jpg" | static_url }}" alt="{{ settings.product_payment_3_alt }}" class="mediopago">
+        <img loading="lazy" src="{{ "product_payment_4.jpg" | static_url }}" alt="{{ settings.product_payment_4_alt }}" class="mediopago">
     </div>
 
     <div class="promovip">
@@ -121,7 +121,7 @@
 
     {% if product.description is not empty %}
           <div class="secctitles">
-            <h1 class="maintitle">Descripción 🔍</h1>
+            <h2 class="maintitle">Descripción 🔍</h2>
             <div class="linetitle"></div>
           </div>
 

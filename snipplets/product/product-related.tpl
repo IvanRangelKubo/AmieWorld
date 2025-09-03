@@ -35,7 +35,7 @@
     <div class="seccrecomendados">
     <div class="customcontainer">
             <div class="secctitles">
-            <h1 class="maintitle">{{ settings.products_related_title }}</h1>
+            <h2 class="maintitle">{{ settings.products_related_title }}</h2>
             <div class="linetitle"></div>
             </div>
         <div class="w-embed">

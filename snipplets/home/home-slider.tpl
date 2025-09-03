@@ -3,7 +3,7 @@
 	{% for image in settings.slider %}
 		<div class="slidebanner w-slide">
 			<a href="{{ image.link }}" class="linkbannerslider w-inline-block">
-				<img alt="{{ image.alt }}" src="{{ image.image | static_url }}" loading="lazy" class="bannerimgslider">
+				<img alt="{{ image.title }}" src="{{ image.image | static_url }}" loading="lazy" class="bannerimgslider">
 			</a>
 		</div>
 	{% endfor %}
@@ -22,7 +22,7 @@
 	{% for image in settings.slider_mobile %}
 			<div class="slidebanner w-slide">
 				<a href="{{ image.link }}" class="linkbannerslider w-inline-block">
-					<img alt="{{ image.alt }}" src="{{ image.image | static_url }}" loading="lazy" class="bannerimgslider">
+					<img alt="{{ image.title }}" src="{{ image.image | static_url }}" loading="lazy" class="bannerimgslider">
 				</a>
 			</div>
 	{% endfor %}

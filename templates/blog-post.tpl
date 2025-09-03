@@ -40,7 +40,7 @@
         {% if settings.show_recomended_article_1 or settings.show_recomended_article_2 %}
             <div class="entradasrecientes">
                 <div class="secctitles">
-                    <h1 class="maintitle">Entradas anteriores 📝</h1>
+                    <h2 class="maintitle">Entradas anteriores 📝</h2>
                     <div class="linetitle"></div>
                 </div>
 

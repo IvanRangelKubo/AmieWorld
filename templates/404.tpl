@@ -12,7 +12,7 @@
 		<div class="customcontainer" >
 			<div class="not-found-div">
         <img src="{{ "images/notfount_icon.svg" | static_url }}" alt="Not found icon" class="imgsearch">
-        <h3 class="no-reults-txt">LO SENTIMOS<br>La pagina que estas buscando, no existe.</h3>
+        <h1 class="no-reults-txt">LO SENTIMOS<br>La pagina que estas buscando, no existe.</h1>
       </div>
 		</div>
 	</section>

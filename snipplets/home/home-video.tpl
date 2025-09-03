@@ -3,7 +3,7 @@
 
       <div class="secctitles">
         <div class="linetitle"></div>
-        <h1 class="maintitle">{{ settings.reviews_section_title }}</h1>
+        <h2 class="maintitle">{{ settings.reviews_section_title }}</h2>
         <div class="linetitle"></div>
       </div>
 

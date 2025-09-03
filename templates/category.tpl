@@ -67,8 +67,8 @@
 				{% include 'snipplets/grid/pagination.tpl' with { infinite_scroll: false } %}
 			{% else %}
 				<div class="not-found-div">
-					<img alt="" src="{{ 'images/notfount_icon.svg' | static_url }}" class="imgsearch">
-					<h1 class="no-reults-txt">LO SENTIMOS<br>Tu búsqueda no produjo ningún resultado intenta nuevamente con otra palabra.</h1>
+					<img alt="Not found Icon" src="{{ 'images/notfount_icon.svg' | static_url }}" class="imgsearch">
+					<h2 class="no-reults-txt">LO SENTIMOS<br>Tu búsqueda no produjo ningún resultado intenta nuevamente con otra palabra.</h2>
 				</div>
 			{% endif %}
 			<!-- Products -->

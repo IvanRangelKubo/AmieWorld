@@ -17,7 +17,7 @@
       <div class="customcontainer">
 
         <div class="secctitles">
-          <h1 class="maintitle">{{ settings.products_why_title }}</h1>
+          <h2 class="maintitle">{{ settings.products_why_title }}</h2>
           <div class="linetitle"></div>
         </div>
 
@@ -81,7 +81,7 @@
       <div class="customcontainer">
 
         <div class="secctitles">
-          <h1 class="maintitle">{{ settings.products_brands_title }}</h1>
+          <h2 class="maintitle">{{ settings.products_brands_title }}</h2>
           <div class="linetitle"></div>
         </div>
 
@@ -117,7 +117,7 @@
     <div class="modulereviews">
       <div class="customcontainer">
         <div class="secctitles">
-          <h1 class="maintitle">Clientes felices 😀</h1>
+          <h2 class="maintitle">Clientes felices 😀</h2>
           <div class="linetitle"></div>
         </div>
         <div class="containerloox w-embed"></div>

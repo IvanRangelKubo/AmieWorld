@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-wf-page="6887a744c366a2ae40132ca6" data-wf-site="6887a73ec366a2ae40132b42" >
+<html lang="es" data-wf-page="6887a744c366a2ae40132ca6" data-wf-site="6887a73ec366a2ae40132b42" >
     <head>
         <link rel="preconnect" href="{{ store_resource_hints }}" />
         <link rel="dns-prefetch" href="{{ store_resource_hints }}" />
@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{{ page_title }}</title>
         <meta name="description" content="{{ page_description }}" />
+        <link href="images/webclip.png" rel="apple-touch-icon">
 
         <!-- Enlaces CSS para OwlCarousel2 -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">

@@ -251,7 +251,7 @@ Página de inicio
 		width = 100
 		height = 100
 	i18n_input
-		name = icon_alt_9
+		name = icon_alt_8
 		description = Texto alternativo (alt)
 	subtitle
 		subtitle = Marca 9
@@ -406,6 +406,9 @@ Página de inicio
 	i18n_input
 		name = banner_01_url
 		description = Link
+	i18n_input
+		name = banner_01_alt
+		description = Texto alternativo (Alt)
 	subtitle
 		subtitle = Producto 2
 	checkbox
@@ -422,6 +425,9 @@ Página de inicio
 	i18n_input
 		name = banner_02_url
 		description = Link
+	i18n_input
+		name = banner_02_alt
+		description = Texto alternativo (Alt)
 	subtitle
 		subtitle = Procducto 3
 	checkbox
@@ -438,6 +444,9 @@ Página de inicio
 	i18n_input
 		name = banner_03_url
 		description = Link
+	i18n_input
+		name = banner_03_alt
+		description = Texto alternativo (Alt)
 	collapse
 		title = Productos destacados
 		backto = home_order_position
@@ -734,15 +743,27 @@ Detalle de producto
 	image
 		original = product_payment_1.jpg
 		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (Alt)
+		name = product_payment_1_alt
 	image
 		original = product_payment_2.jpg
 		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (Alt)
+		name = product_payment_2_alt
 	image
 		original = product_payment_3.jpg
 		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (Alt)
+		name = product_payment_3_alt
 	image
 		original = product_payment_4.jpg
 		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (Alt)
+		name = product_payment_4_alt
 	title
 		title = Envio gratis
 	i18n_input

@@ -5,7 +5,7 @@
         <div class="w-layout-cell cellintroblog">
 
           <div class="secctitles">
-            <h1 class="maintitle">{{ settings.blog_section_title }}</h1>
+            <h2 class="maintitle">{{ settings.blog_section_title }}</h2>
             <div class="linetitle"></div>
           </div>
 
@@ -134,7 +134,7 @@
   <div class="seccinstagram">
     <div class="customcontainer">
       <div class="secctitles">
-        <h1 class="maintitle center">Síguenos @amieworldmx</h1>
+        <h2 class="maintitle center">Síguenos @amieworldmx</h2>
       </div>
       <div class="instascriptcont w-embed"></div>
     </div>
