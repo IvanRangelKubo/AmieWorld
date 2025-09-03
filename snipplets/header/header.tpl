@@ -7,15 +7,15 @@
     <div data-w-id="c828cb3c-650a-2310-28ed-eb3e6a59f889" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="customnav w-nav">
       <div class="customcontainer navbar">
 
+        <div class="menu-button w-nav-button">
+            <div class="w-icon-nav-menu"></div>
+        </div>
+
         {% snipplet "header/header-logo.tpl" %}
 
         {% snipplet "navigation/navigation-nav-list.tpl" %}
 
         {% snipplet "header/header-utilities.tpl" %}
-
-        <div class="menu-button w-nav-button">
-            <div class="w-icon-nav-menu"></div>
-        </div>
 
       </div>
     </div>

@@ -105,4 +105,10 @@
       top: 20%;
   }
 
+    @media screen and (max-width: 479px) {
+      .cart-row.cart-footer {
+          padding: 0 !important;
+      }
+    }
+
 </style>

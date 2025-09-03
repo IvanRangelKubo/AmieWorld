@@ -126,3 +126,12 @@
 		}
 	})
 </script>
+
+
+<style>
+    @media screen and (max-width: 479px) {
+      div#w-node-_0737ae8c-1141-924f-e9ac-aff72f0702be-2f070258 {
+          align-items: center;
+      }
+    }
+</style>
