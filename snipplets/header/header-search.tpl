@@ -12,7 +12,6 @@
 </div>
 
 <style>
-
     .close-buscador{
         margin: 0px -2px 0px 0px;
         padding: 15px 0 0 0;
@@ -22,7 +21,20 @@
         padding-top: 8px;
     }
 
-    .contsearchpredictive {
-        display: none !important;
+    .search-suggest-list {
+        border: 1px solid var(--darkgrey);
+        background-color: #fff;
+        width: 100%;
+        height: auto;
+        display: block;
+        inset: 44px 0% auto;
+        overflow: auto;
+        max-width: 800px;
+        margin: auto;
+        max-height: 240px;
+    }
+
+    .js-modal-overlay.modal-overlay {
+        background: none;
     }
 </style>
