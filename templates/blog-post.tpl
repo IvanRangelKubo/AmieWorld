@@ -116,6 +116,16 @@
         display: none !important;
     }
 
+    @media screen and (max-width: 479px) {
+        .containershare {
+            width: 255px;
+        }
+
+        .contsocial-media {
+            padding-top: 10px;
+        }
+    }
+
 </style>
 
 <script>
@@ -135,9 +145,4 @@
         });
     }
     });
-</script>
-
-<script>
-    console.log("Blog posts:");
-    console.log({{ post | json_encode | raw }});
 </script>
