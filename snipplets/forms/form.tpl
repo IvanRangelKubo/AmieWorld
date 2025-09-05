@@ -20,4 +20,7 @@
     {% if template == 'account.login' %}
         <a href="/account/reset" class="frgtpassword">Olvidé mi contraseña</a>
     {% endif %}
+        {% if template == 'account.reset' %}
+        <a href="/account" class="frgtpassword">Regresar</a>
+    {% endif %}
 </form>
