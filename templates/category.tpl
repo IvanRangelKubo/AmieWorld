@@ -135,6 +135,27 @@
 		.ApliedFilters {
 			margin: auto !important;
 		}
+
+
+
+		    @media screen and (max-width: 479px) {
+				.col-12.mb-3.containerFiltersApplied {
+					flex-wrap: wrap;
+				}
+
+				.js-category-controls.row.align-items-center.mb-md-3.category-controls.categoryFilters {
+					margin: 25px 10px 25px 10px;
+				}
+
+				.filtersCategory {
+					gap: 10px;
+				}
+
+				.category-controls {
+					top: 0 !important;
+				}
+			}
+
 	</style>
 {% elseif show_help %}
 	{# Category Placeholder #}
