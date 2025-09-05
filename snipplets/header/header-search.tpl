@@ -22,7 +22,7 @@
         padding-top: 8px;
     }
 
-    .js-search-suggest.search-suggest.contsearchpredictive {
-        display: none;
+    .contsearchpredictive {
+        display: none !important;
     }
 </style>
