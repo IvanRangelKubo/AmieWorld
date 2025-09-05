@@ -22,6 +22,14 @@
 
 </div>
 
+<style>
+
+    .searchcont {
+        height: auto !important;
+    }
+
+</style>
+
 {% if not settings.head_fix %}
     {% include "snipplets/notification.tpl" with {add_to_cart: true, add_to_cart_fixed: true} %}
 {% endif %}
