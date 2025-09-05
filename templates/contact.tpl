@@ -140,5 +140,11 @@
 				border: 1px solid var(--darkgrey);
 				box-shadow: 3px 3px 0 0 var(--darkgrey);
 		}
+
+		@media screen and (max-width: 991px) {
+			.txtlogin {
+				max-width: none;
+			}
+		}
 	</style>
 </section>

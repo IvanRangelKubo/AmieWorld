@@ -186,18 +186,24 @@
     }
 
     select#province {
-    border: 1px solid var(--darkgrey);
-    color: var(--darkgrey);
-    background-color: #fff;
-    border-radius: 0;
-    width: 100%;
-    height: 50px;
-    margin-bottom: 15px;
-    padding: 10px;
-    font-family: Montserrat, sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-}
+        border: 1px solid var(--darkgrey);
+        color: var(--darkgrey);
+        background-color: #fff;
+        border-radius: 0;
+        width: 100%;
+        height: 50px;
+        margin-bottom: 15px;
+        padding: 10px;
+        font-family: Montserrat, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+
+    @media screen and (max-width: 991px) {
+        .txtlogin {
+            max-width: none;
+        }
+    }
     
 </style>
