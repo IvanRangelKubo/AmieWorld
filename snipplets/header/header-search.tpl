@@ -37,4 +37,20 @@
     .js-modal-overlay.modal-overlay {
         background: none;
     }
+
+    @media screen and (min-width: 1024px){
+        .js-search-suggest.search-suggest {
+            width: 70%;
+            margin: auto;
+        }
+    }
+
+    @media screen and (max-width: 991px){
+        .js-search-suggest.search-suggest {
+            width: 90%;
+            margin: auto;
+        }
+    }
+
+
 </style>
