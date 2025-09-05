@@ -143,4 +143,34 @@
     .w-row.section-single-product {
         margin: 0;
     }
+
+    @media screen and (max-width: 479px) {
+        ul.breadcrumbs.arbol-navegacion.vip {
+            display: inline-block !important;
+        }
+
+        li.list-item-arbollist-item-arbol {
+            margin-top: 10px;
+        }
+
+        ul.breadcrumbs.arbol-navegacion.vip {
+            padding-top: 0px;
+        }
+
+        .contsocial-media {
+            padding-top: 10px;
+        }
+
+        .containershare {
+            width: 300px !important;
+        }
+
+        .cont-variacion.js-product-variants-group.col-12.mb-2.text-center.text-md-left {
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+
+
+
 </style>
