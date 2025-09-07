@@ -52,6 +52,7 @@
         {# Load async styling not mandatory for first meaningfull paint #}
 
         <link rel="stylesheet" href="{{ 'css/style-async.scss.tpl' | static_url }}" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="{{ 'css/personalized3.css' | static_url }}">
 
         {# Loads custom CSS added from Advanced Settings on the admin´s theme customization screen #}
 
@@ -90,44 +91,43 @@
     </head>
     <body class="{% if settings.head_fix %}js-head-offset head-offset{% endif %} {% if customer %}customer-logged-in{% endif %} template-{{ template | replace('.', '-') }}">
 
-        {# Back to admin bar #}
-
-        {{back_to_admin}}
-
         {# Page content #}
 
-        <section class="section-password">
-            <div class="container">
-                <div class="row justify-content-md-center">
-                    <div class="col-md-8 text-center">
-                        <div class="my-5">
-                            {{ component('logos/logo', {logo_img_classes: 'transition-soft-slow', logo_text_classes: 'h1 m-0'}) }}
+          <div class="mttocont">
+            <div id="w-node-_46d8964c-167c-42eb-1366-7b03a87a9a68-20e2c06a" class="w-layout-layout stackmtto wf-layout-layout">
+                <div class="w-layout-cell celllogo">
+                    <div>
+                        <img loading="lazy" src="{{ "images/amie_logo_header.svg" | static_url }}" alt="amie world logo" class="logomtto">
+                    </div>
+                </div>
+                <div class="w-layout-cell">
+                    <h1 class="titlemtto">Estamos preparando algo increíble para ti 🎁</h1>
+                    <p class="txtmtto">Por favor, inténtalo nuevamente en unos minutos para descubrir todas las novedades.</p>
+                    <div id="Lock">
+                        <img data-w-id="46d8964c-167c-42eb-1366-7b03a87a9a72" loading="lazy" alt="" src="{{ "images/password_icon.svg" | static_url }}" class="iconformmtto">
+                    </div>
+                    <div class="div-block">
+                        <div class="formloginstore w-form" id="Pass">
+                            {% embed "snipplets/forms/form.tpl" with{form_id: 'password-form', submit_text: 'Login' | translate, form_custom_class: 'contlogform', submit_custom_class: 'logiintienda w-button' } %}
+                                {% block form_body %}
+
+                                    {% embed "snipplets/forms/form-input.tpl" with{input_for: 'password', type_password: true, input_name: 'password', input_help: true, input_help_link: store.customer_reset_password_url, input_custom_class: 'passtienda w-input' } %}
+                                        {% block input_form_alert %}
+                                            {% if invalid_password == true %}
+                                                <div class="alert alert-danger">{{ 'La contraseña es incorrecta.' | translate }}</div>
+                                            {% endif %}
+                                        {% endblock input_form_alert %}
+                                    {% endembed %}
+
+                                {% endblock %}
+                            {% endembed %}
                         </div>
-
-                        <h2 class="mb-5">{{ message }}</h2>
-                        {% embed "snipplets/forms/form.tpl" with{form_id: 'password-form', submit_text: 'Desbloquear' | translate } %}
-                            {% block form_body %}
-
-                                {% embed "snipplets/forms/form-input.tpl" with{input_for: 'password', type_password: true, input_name: 'password', input_help: true, input_help_link: store.customer_reset_password_url, input_label_text: 'Contraseña de acceso' | translate } %}
-                                    {% block input_form_alert %}
-                                        {% if invalid_password == true %}
-                                            <div class="alert alert-danger">{{ 'La contraseña es incorrecta.' | translate }}</div>
-                                        {% endif %}
-                                    {% endblock input_form_alert %}
-                                {% endembed %}
-
-                            {% endblock %}
-                        {% endembed %}
-
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
 
-        {# Footer #}
-
-        {% snipplet "footer.tpl" %}
 
         {# Javascript needed to footer logos lazyload #}
 
@@ -136,7 +136,41 @@
             {# Libraries that do NOT depend on other libraries, e.g: Jquery #}
 
             {% include "static/js/external-no-dependencies.js.tpl" %}
+            
 
         </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const lock = document.getElementById("Lock");
+                const pass = document.getElementById("Pass");
+                pass.style.display = "none";
+
+                lock.addEventListener("click", function () {
+                pass.style.display = pass.style.display === "none" ? "block" : "none";
+                });
+            });
+        </script>
+
+        <style>
+            .mt-4.text-center {
+                display: none;
+            }
+
+            a.js-password-view.btn.form-toggle-eye {
+                display: none;
+            }
+
+            .form-group {
+                margin: 0;
+            }
+
+            input.btn.btn-primary.logiintienda.w-button {
+                text-transform: none;
+                letter-spacing: 0;
+            }
+        </style>
+
+
     </body>
 </html>

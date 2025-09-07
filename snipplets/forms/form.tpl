@@ -12,7 +12,7 @@
 
 <form id="{{ form_id }}" action="{{ form_action }}" method="post" class="form {{ form_custom_class }}" {% if data_store %}data-store="{{ data_store }}"{% endif %}>
     {% block form_body %}
-    {% endblock%}
+    {% endblock %}
     {% if cancel %}
         <a href="#" class="{{ cancel_custom_class }} btn btn-default">{{ cancel_text }}</a>
     {% endif %}
