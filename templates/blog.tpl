@@ -17,7 +17,7 @@
 
     
                         <div class="w-layout-cell imgcellentry">
-                            <div class="imgentrydiv" style="background-image: url('{{ post.thumbnail | default('images/placeholder_amieworld.webp') }}');"></div>
+                            <div class="imgentrydiv" style="background-image: url('{{ post.thumbnail | default('images/img_blog_entry.webp' | static_url) }}');"></div>
                         </div>
 
                         <div class="w-layout-cell">
