@@ -131,11 +131,6 @@
 							</div>
 
 					</div>
-
-					<div class="loginpopform w-form">
-					
-
-					</div>
 				</div>
 
 				<div class="w-layout-cell imglogincell">

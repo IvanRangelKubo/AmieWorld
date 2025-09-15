@@ -1,7 +1,9 @@
 
 <section class="seccmicuenta">
     <div class="customcontainer" data-store="account-order-detail-{{ order.id }}">
-    	<div class="elementos-cuenta">
+
+
+    	<div class="contmicuenta">
 
             <div class="secctitles internas">
                 <h1 class="maintitle internas">ORDEN: <span class="redtxttitle">#{{order.number}}</span>🌟</h1>

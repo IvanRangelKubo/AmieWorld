@@ -1,36 +1,33 @@
 {# User addresses listed #}
 
-<section class="seccinternas">
-    <div class="custom-container">
-        <div class="elementos-cuenta">
+<section class="seccmicuenta">
+    <div class="customcontainer">
 
+        <div class="container-direcciones">
 
-            <div class="maintitle-cont">
-                <h2 class="maintitle">DIRECCIONES</h2>
+            <div class="secctitles internas">
+            <h1 class="maintitle internas">Mis direcciones 🏠</h1>
+            <div class="linetitle"></div>
             </div>
 
-            <div class="container-direcciones" >
-                {% for address in customer.addresses %}
-                    <div class="direccion-container">
-                        
-                        {% if loop.first %}
-                            <h4 class="addressTitle" >{{ 'Principal' | translate }}</h4>
-                        {% elseif loop.index == 2 %}
-                            <h4 class="addressTitle" >{{ 'Otras direcciones' | translate }}</h4>
-                        {% endif %}
+            <div class="contbtncuenta">
+            <a href="/account" class="btnmicuenta w-button">Regresar</a>
+            <a href="{{ store.customer_new_address_url }}" class="btnmicuenta w-button">Agregar dirección</a>
+            </div>
 
-                        <div class="conticons-editadress w-clearfix">
-                            <a href="{{ store.customer_address_url(address) }}" class="btndirecciones editar w-button">{{ 'Editar' | translate }}</a>
-                        </div>
-                        
-                        <div class="infodireccion">{{ address | format_address }}</div>
+            
+            {% for address in customer.addresses %}
+                <div class="direccion-container">
 
+                    <div class="conticons-editadress w-clearfix">
+                        <a href="{{ store.customer_address_url(address) }}" class="btndirecciones editar w-button">{{ 'Editar' | translate }}</a>
                     </div>
-                {% endfor %}
-            </div>
+                    
+                    <div class="infodireccion">{{ address | format_address }}</div>
 
-                
-            <a class="btndirecciones agregar w-button" href="{{ store.customer_new_address_url }}">{{ 'Agregar una nueva dirección' | translate }}</a>
+                </div>
+            {% endfor %}
+            
 
         </div>
     </div>
