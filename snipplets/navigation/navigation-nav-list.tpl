@@ -1,6 +1,9 @@
 <nav role="navigation" id="barritavar" class="nav-menu w-nav-menu">
+
+  {% set menu_key = settings.main_menu | default('navigation') %}
+  {% set menu_items = attribute(menus, menu_key) ?? navigation %}
   
-  {% for item in navigation %}
+  {% for item in menu_items %}
     
     {% if item.subitems %}
       <div data-hover="true" data-delay="0" class="dropnavmain w-dropdown">
